@@ -1,7 +1,6 @@
 # build output
 npm-debug.log
 .next/
-dist/
 
 # dependencies
 node_modules/
