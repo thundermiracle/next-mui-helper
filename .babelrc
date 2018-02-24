@@ -1,18 +1,11 @@
 {
   "presets": [
     "next/babel",
-    "env",
     "react"
   ],
   "plugins": [
     "transform-class-properties",
-    "transform-object-rest-spread",
-    ["module-resolver", {
-      "root": ["/"],
-      "alias": {
-        "src": "./src"
-      }
-    }]
+    "transform-object-rest-spread"
   ],
   "env": {
     "production": {

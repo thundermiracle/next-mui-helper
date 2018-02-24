@@ -29,9 +29,10 @@ export default makeNextDocument();
 ```jsx
 import React from 'react';
 import withParts from 'nextjs-mui-helper/mui/withParts';
+import Button from 'material-ui/Button';
 
 const Page1 = () => (
-  <Button>
+  <Button color="primary">
     Hello World
   </Button>
 );
@@ -58,7 +59,7 @@ That's it! Want to inject your own theme? See following instructions.
 
 ## Examples
 
-You can find some examples under the [./example](https://github.com/mui-org/thundermiracle/nextjs-mui-helper) folder.
+You can find some examples under the [./example](https://github.com/thundermiracle/nextjs-mui-helper/tree/develop/src) folder.
 
 ## License
 
