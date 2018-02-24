@@ -1,0 +1,60 @@
+{
+  "name": "nextjs-mui-helper",
+  "version": "0.1.0",
+  "description": "hocs for making material-ui project with nextjs(SSR)",
+  "main": "lib",
+  "scripts": {
+    "eslint": "eslint ./ --fix",
+    "build": "npm run eslint && rimraf lib/ && NODE_ENV=production babel src --out-dir lib/",
+    "test": "npm run eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thundermiracle/nextjs-mui-helper"
+  },
+  "author": "thundermiracle",
+  "license": "MIT",
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+  },
+  "peerDependencies": {
+    "material-ui": "^1.0.0-beta.00",
+    "next": "^3.0.0 || ^4.0.0 || ^5.0.0",
+    "nprogress": "^0.2.0",
+    "react": "^15.0.0 || ^16.0.0",
+    "react-dom": "^15.0.0 || ^16.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-plugin-module-resolver": "^3.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.12",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-power-assert": "^2.0.0",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-import-resolver-babel-module": "^4.0.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jest": "^21.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.6.0",
+    "jest": "^22.4.2",
+    "jss": "^9.5.1",
+    "material-ui": "1.0.0-beta.30",
+    "material-ui-icons": "^1.0.0-beta.17",
+    "next": "^4.2.3",
+    "nprogress": "^0.2.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-jss": "^8.2.1",
+    "rimraf": "^2.6.2"
+  }
+}
