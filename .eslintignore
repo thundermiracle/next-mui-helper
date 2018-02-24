@@ -1,0 +1,12 @@
+# /node_modules/* and /bower_components/* ignored by default
+
+# ignore  settings
+.next/*
+.vscode/*
+next.config.js
+
+# Ignore built files
+lib/*
+
+# Ignore jest
+#test/**/*
