@@ -1,11 +1,9 @@
-export default (...fns) => (...args) => {
-  fns.forEach((fn) => {
-    if (fn == null) return;
+export default (...fns) => (...args) => (
+  fns.reduce((prevBC, fn) => {
+    if (fn == null) return prevBC;
 
-    if (!Array.isArray(args)) {
-      args = [args];
-    }
-    args = fn(...args);
-  });
-  return args;
-};
+    if (!Array.isArray(prevBC)) prevBC = [prevBC];
+
+    return fn(...prevBC);
+  }, args)
+);
