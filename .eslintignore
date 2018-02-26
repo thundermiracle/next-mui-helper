@@ -6,7 +6,9 @@
 next.config.js
 
 # Ignore built files
-lib/*
+dist/*
 
 # Ignore jest
 #test/**/*
+
+**/node_modules/**
