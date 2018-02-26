@@ -6,8 +6,8 @@ import React from 'react';
  * Passing IntlScripts as name:localeDataScript from server is required
  * @param {NextDocument} DocumentComponent 
  */
-const extendsDocumentWithIntl = (DocumentComponent) => {
-  class ExtendsDocumentWithIntl extends DocumentComponent {
+const extendsWithIntl = (DocumentComponent) => {
+  class ExtendsWithIntl extends DocumentComponent {
     static async getInitialProps(ctx) {
       const props = await super.getInitialProps(ctx);
 
@@ -31,7 +31,7 @@ const extendsDocumentWithIntl = (DocumentComponent) => {
     }
   }
 
-  return ExtendsDocumentWithIntl;
+  return ExtendsWithIntl;
 };
 
-export default extendsDocumentWithIntl;
+export default extendsWithIntl;
