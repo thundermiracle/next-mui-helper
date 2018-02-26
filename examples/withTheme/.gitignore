@@ -1,8 +1,6 @@
 # build output
 npm-debug.log
 .next/
-dist/
-.vscode/
 
 # dependencies
 node_modules/

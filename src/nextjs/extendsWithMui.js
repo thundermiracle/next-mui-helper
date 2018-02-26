@@ -10,8 +10,8 @@ import getContext from '../util/getContext';
  * @param {MUITheme} theme
  * @param {next/document} DocumentComponent
  */
-const extendsDocumentWithMui = theme => ((DocumentComponent) => {
-  class ExtendsDocumentWithMui extends DocumentComponent {
+const extendsWithMui = theme => ((DocumentComponent) => {
+  class ExtendsWithMui extends DocumentComponent {
     static async getInitialProps(ctx) {
       const props = await super.getInitialProps(ctx);
 
@@ -74,7 +74,7 @@ const extendsDocumentWithMui = theme => ((DocumentComponent) => {
     }
   }
 
-  return ExtendsDocumentWithMui;
+  return ExtendsWithMui;
 });
 
-export default extendsDocumentWithMui;
+export default extendsWithMui;
