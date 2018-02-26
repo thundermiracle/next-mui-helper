@@ -59,7 +59,7 @@ That's it! Want to inject your own theme? See following instructions.
 
 ## Examples
 
-You can find some examples under the [./example](https://github.com/thundermiracle/nextjs-mui-helper/tree/develop/src) folder.
+You can find some examples under the [./example](https://github.com/thundermiracle/nextjs-mui-helper/tree/master/examples) folder.
 
 ## License
 
