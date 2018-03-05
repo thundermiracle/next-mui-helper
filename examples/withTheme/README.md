@@ -1,6 +1,6 @@
 ## Description
 
-The simplest way of using nextjs-mui-helper without inject material-ui's theme object.
+Example of inject theme and layout with nextjs-mui-helper.
 
 ## How to use
 
