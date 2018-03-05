@@ -55,11 +55,11 @@ That's it! Want to inject your own theme? See following instructions.
 |:---|:-------------:|:--------------|:-----------|
 | 1 |  muiTheme | ```{ palette: { primary: blue, secondary: pink, }, }``` | material-ui's theme object |
 | 2 |  layout | null | Layout component(like ```<Layout>{childrend}</Layout>)``` |
-| 3 |  enable nprogress | true | enable progress bar made by [nprogress](https://github.com/rstacruz/nprogress) |
+| 3 |  enable nprogress | false | enable progress bar made by [nprogress](https://github.com/rstacruz/nprogress) |
 
 ## Examples
 
-You can find some examples under the [./example](https://github.com/thundermiracle/nextjs-mui-helper/tree/master/examples) folder.
+You can find some examples under the [./example](/examples) folder.
 
 ## License
 
