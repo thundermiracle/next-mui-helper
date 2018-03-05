@@ -3374,9 +3374,12 @@ next@^4.2.3:
     write-file-webpack-plugin "4.2.0"
     xss-filters "1.2.7"
 
-nextjs-mui-helper@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/nextjs-mui-helper/-/nextjs-mui-helper-0.2.0.tgz#b61d001796709b9987847af267dffa9c6e3b4d59"
+nextjs-mui-helper@latest:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/nextjs-mui-helper/-/nextjs-mui-helper-0.2.2.tgz#4d2353f10630db30c70809f4889509e09892d989"
+  dependencies:
+    jss "^9.5.1"
+    react-jss "^8.2.1"
 
 node-fetch@^1.0.1:
   version "1.7.3"

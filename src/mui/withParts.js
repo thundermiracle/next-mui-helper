@@ -6,7 +6,7 @@ import withProgressBar from './withProgressBar';
 
 import defaultTheme from './defaultTheme';
 
-const withParts = (muiTheme = null, Layout = null, enableNProgress = true) => {
+const withParts = (muiTheme = null, Layout = null, enableNProgress = false) => {
   let layoutHoc;
   if (Layout != null) layoutHoc = withLayout(Layout);
 
