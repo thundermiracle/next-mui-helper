@@ -1,3 +1,15 @@
+<h1 align="center">
+
+nextjs-mui-hleper
+
+</h1>
+
+[![npm version](https://badge.fury.io/js/nextjs-mui-helper.svg)](https://badge.fury.io/js/nextjs-mui-helper)
+ [![Build Status](https://travis-ci.org/thundermiracle/nextjs-mui-helper.svg)](https://travis-ci.org/thundermiracle/nextjs-mui-helper)
+[![dependencies Status](https://david-dm.org/thundermiracle/nextjs-mui-helper/status.svg)](https://david-dm.org/thundermiracle/nextjs-mui-helper)
+[![devDependencies Status](https://david-dm.org/thundermiracle/nextjs-mui-helper/dev-status.svg)](https://david-dm.org/thundermiracle/nextjs-mui-helper?type=dev)
+[![peerDependencies Status](https://david-dm.org/thundermiracle/nextjs-mui-helper/peer-status.svg)](https://david-dm.org/thundermiracle/nextjs-mui-helper?type=peer)
+
 ## Description
 
 nextjs-mui-helper is a package for making a project with [nextjs](https://github.com/zeit/next.js/) and [material-ui](https://github.com/mui-org/material-ui) easier.
