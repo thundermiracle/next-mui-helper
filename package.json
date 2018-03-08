@@ -4,7 +4,7 @@
   "description": "hocs for making material-ui project with nextjs(SSR)",
   "main": "mui",
   "scripts": {
-    "eslint": "eslint ./ --fix",
+    "eslint": "eslint ./src",
     "build:rm": "rimraf dist/",
     "build:cp": "node ./scripts/copyFiles dist/ package.json README.md LICENSE",
     "build": "npm run build:rm && NODE_ENV=production babel src --out-dir ./dist && npm run build:cp",
