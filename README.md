@@ -1,6 +1,6 @@
 <h1 align="center">
 
-nextjs-mui-hleper
+nextjs-mui-helper
 
 </h1>
 
