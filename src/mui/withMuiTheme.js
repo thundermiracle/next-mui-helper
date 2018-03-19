@@ -1,28 +1,11 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import { withStyles, MuiThemeProvider } from 'material-ui/styles';
-import Reboot from 'material-ui/Reboot';
+import { MuiThemeProvider } from 'material-ui/styles';
+// import { Reboot, CssBaseline } from 'material-ui';
 
 import getInitialProps from '../util/getInitialProps';
 import getContext from '../util/getContext';
-
-// Apply some reset
-const styles = {
-  '@global': {
-    html: {
-      WebkitFontSmoothing: 'antialiased', // Antialiasing.
-      MozOsxFontSmoothing: 'grayscale', // Antialiasing.
-    },
-    body: {
-      margin: 0,
-    },
-  },
-};
-
-let AppWrapper = props => props.children;
-
-AppWrapper = withStyles(styles)(AppWrapper);
 
 /**
  * inject Mui Theme
@@ -48,15 +31,16 @@ const withMuiTheme = theme => ((BaseComponent) => {
     }
 
     render() {
+      // mui < beta36: reboot; mui >= beta37 : CssBaseline
+      // const CssBaselineWrapper = CssBaseline == null ? Reboot : CssBaseline;
+
       return (
         <MuiThemeProvider
           theme={this.styleContext.theme}
           sheetsManager={this.styleContext.sheetsManager}
         >
-          <Reboot />
-          <AppWrapper>
-            <BaseComponent {...this.props} />
-          </AppWrapper>
+          {/* <CssBaselineWrapper /> */}
+          <BaseComponent {...this.props} />
         </MuiThemeProvider>
       );
     }

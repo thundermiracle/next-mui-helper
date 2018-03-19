@@ -1,5 +1,6 @@
 # build output
 npm-debug.log
+yarn-error.log
 .next/
 dist/
 .vscode/
