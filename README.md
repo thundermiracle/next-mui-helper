@@ -68,6 +68,7 @@ That's it! Want to inject your own theme? See following instructions.
 | 1 |  muiTheme | ```{ palette: { primary: blue, secondary: pink, }, }``` | material-ui's theme object |
 | 2 |  layout | null | Layout component(like ```<Layout>{childrend}</Layout>)``` |
 | 3 |  enable nprogress | false | enable progress bar made by [nprogress](https://github.com/rstacruz/nprogress) |
+| 4 |  enable CssBaseline | true | enable material-ui's default [CssBaseline](https://material-ui-next.com/style/css-baseline/) |
 
 ## Examples
 

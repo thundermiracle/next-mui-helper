@@ -47,7 +47,7 @@ const extendsWithMui = theme => ((DocumentComponent) => {
       const { stylesContext } = this.props;
 
       return (
-        <html lang="ja">
+        <html lang="en">
           <Head>
             <meta charSet="utf-8" />
             {/* Use minimum-scale=1 to enable GPU rasterization */}
@@ -60,10 +60,6 @@ const extendsWithMui = theme => ((DocumentComponent) => {
             />
             {/* PWA primary color */}
             <meta name="theme-color" content={stylesContext.theme.palette.primary[500]} />
-            <link
-              rel="stylesheet"
-              href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
-            />
           </Head>
           <body>
             <Main />
