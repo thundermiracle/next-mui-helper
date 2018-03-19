@@ -8,6 +8,7 @@
   },
   "author": "thundermiracle",
   "license": "MIT",
+  "main": "./src/pages/index.js",
   "dependencies": {
     "material-ui": "1.0.0-beta.30",
     "material-ui-icons": "^1.0.0-beta.17",
