@@ -3,20 +3,22 @@ import compose from '../util/compose';
 import withLayout from './withLayout';
 import withMuiTheme from './withMuiTheme';
 import withProgressBar from './withProgressBar';
+import withCssBaseline from './withCssBaseline';
 
 import defaultTheme from './defaultTheme';
 
-const withParts = (muiTheme = null, Layout = null, enableNProgress = false) => {
-  let layoutHoc;
-  if (Layout != null) layoutHoc = withLayout(Layout);
+const withParts = (muiTheme = null, Layout = null, enableNProgress = false, enableDefaultCssBaseline = true) => {
+  const layoutHoc = Layout != null ? withLayout(Layout) : null;
 
   const muiThemeHoc = withMuiTheme(muiTheme || defaultTheme);
 
-  let progressBarHoc;
-  if (enableNProgress) progressBarHoc = withProgressBar;
+  const progressBarHoc = enableNProgress ? withProgressBar : null;
+
+  const cssBaselineHoc = enableDefaultCssBaseline ? withCssBaseline : null;
 
   return compose(
     layoutHoc,
+    cssBaselineHoc, // inject global css before muiTheme
     muiThemeHoc,
     progressBarHoc,
   );
