@@ -5,10 +5,15 @@ function makeNextExportPathMap(pathMap) {
   pathMap.forEach(function (oneGroup) {
     const baseUri = oneGroup.pathname;
     const nameList = oneGroup.children;
-    nameList.forEach(function (oneName) {
-      const page = `/${baseUri}/${oneName}`;
+    if (nameList == null) {
+      const page = `/${baseUri}`;
       nextExportPathMap[page] = { page };
-    });
+    } else {
+      nameList.forEach(function (oneName) {
+        const page = `/${baseUri}/${oneName}`;
+        nextExportPathMap[page] = { page };
+      });
+    }
   });
   return nextExportPathMap;
 }
