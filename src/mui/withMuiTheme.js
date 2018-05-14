@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import { MuiThemeProvider } from 'material-ui/styles';
-// import { Reboot, CssBaseline } from 'material-ui';
 
 import getInitialProps from '../util/getInitialProps';
 import getContext from '../util/getContext';
@@ -13,13 +12,15 @@ import getContext from '../util/getContext';
  */
 const withMuiTheme = theme => ((BaseComponent) => {
   class InjectMuiTheme extends PureComponent {
+    constructor(props, context) {
+      super(props, context);
+
+      this.styleContext = this.props.stylesContext || getContext(theme);
+    }
+
     static async getInitialProps(context) {
       const props = getInitialProps(BaseComponent, context);
       return { ...props };
-    }
-
-    componentWillMount() {
-      this.styleContext = this.props.stylesContext || getContext(theme);
     }
 
     componentDidMount() {
@@ -31,15 +32,11 @@ const withMuiTheme = theme => ((BaseComponent) => {
     }
 
     render() {
-      // mui < beta36: reboot; mui >= beta37 : CssBaseline
-      // const CssBaselineWrapper = CssBaseline == null ? Reboot : CssBaseline;
-
       return (
         <MuiThemeProvider
           theme={this.styleContext.theme}
           sheetsManager={this.styleContext.sheetsManager}
         >
-          {/* <CssBaselineWrapper /> */}
           <BaseComponent {...this.props} />
         </MuiThemeProvider>
       );
