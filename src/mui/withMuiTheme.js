@@ -19,7 +19,7 @@ const withMuiTheme = theme => ((BaseComponent) => {
     }
 
     static async getInitialProps(context) {
-      const props = getInitialProps(BaseComponent, context);
+      const props = await getInitialProps(BaseComponent, context);
       return { ...props };
     }
 
