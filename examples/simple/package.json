@@ -8,8 +8,8 @@
   "author": "thundermiracle",
   "license": "MIT",
   "dependencies": {
-    "@material-ui/core": "^1.0.0-rc.1",
-    "@material-ui/icons": "^1.0.0-rc.0",
+    "@material-ui/core": "latest",
+    "@material-ui/icons": "latest",
     "next": "^5.1.0",
     "nextjs-mui-helper": "next",
     "react": "latest",
