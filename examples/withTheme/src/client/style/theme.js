@@ -1,4 +1,4 @@
-import { deepOrange, teal } from 'material-ui/colors';
+import { deepOrange, teal } from '@material-ui/core/colors';
 
 const theme = {
   palette: {

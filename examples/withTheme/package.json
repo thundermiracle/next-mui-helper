@@ -3,17 +3,15 @@
   "version": "1.0.0",
   "description": "example of inject theme and layout with nextjs-mui-helper",
   "scripts": {
-    "eslint": "eslint ./ --fix",
     "dev": "next ./src"
   },
   "author": "thundermiracle",
   "license": "MIT",
-  "main": "./src/pages/index.js",
   "dependencies": {
-    "material-ui": "1.0.0-beta.30",
-    "material-ui-icons": "^1.0.0-beta.17",
-    "next": "latest",
-    "nextjs-mui-helper": "latest",
+    "@material-ui/core": "1.0.0-rc.1",
+    "@material-ui/icons": "^1.0.0-rc.0",
+    "next": "^5.1.0",
+    "nextjs-mui-helper": "next",
     "prop-types": "latest",
     "react": "latest",
     "react-dom": "latest"

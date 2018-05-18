@@ -12,6 +12,8 @@ nextjs-mui-helper
 
 ## Description
 
+***ONLY @material-ui/core is supported. If you want to use material-ui@beta version, please use v0.2.8 instead.***
+
 nextjs-mui-helper is a package for making a project with [nextjs](https://github.com/zeit/next.js/) and [material-ui](https://github.com/mui-org/material-ui) easier.
 
 There are several steps to enable SSR in nextjs with material-ui which may be little bit confusing for beginners to implement.
