@@ -14,6 +14,17 @@
         "polyfill": false,
         "regenerator": true
       }
+    ],
+    [
+      "module-resolver",
+      {
+        "root": [
+          "./src/"
+        ],
+        "alias": {
+          "material-ui": "@material-ui/core"
+        }
+      }
     ]
   ],
   "env": {

@@ -1,6 +1,6 @@
 import React from 'react';
 import withParts from 'nextjs-mui-helper/mui/withParts';
-import Button from 'material-ui/Button';
+import Button from '@material-ui/core/Button';
 
 const Page1 = () => (
   <Button color="primary">
