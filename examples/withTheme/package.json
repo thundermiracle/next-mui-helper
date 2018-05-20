@@ -10,8 +10,8 @@
   "dependencies": {
     "@material-ui/core": "latest",
     "@material-ui/icons": "latest",
-    "next": "^5.1.0",
-    "nextjs-mui-helper": "next",
+    "next": "latest",
+    "nextjs-mui-helper": "latest",
     "prop-types": "latest",
     "react": "latest",
     "react-dom": "latest"
