@@ -1,7 +1,7 @@
 {
   "name": "simple",
   "version": "1.0.0",
-  "description": "simplest usage of nextjs-mui-helper",
+  "description": "simplest use of nextjs-mui-helper",
   "scripts": {
     "dev": "next ./src"
   },
@@ -10,8 +10,8 @@
   "dependencies": {
     "@material-ui/core": "latest",
     "@material-ui/icons": "latest",
-    "next": "^5.1.0",
-    "nextjs-mui-helper": "next",
+    "next": "latest",
+    "nextjs-mui-helper": "latest",
     "react": "latest",
     "react-dom": "latest"
   }

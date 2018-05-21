@@ -12,7 +12,7 @@ nextjs-mui-helper
 
 ## Description
 
-***ONLY @material-ui/core is supported. If you want to use material-ui@beta version, please use v0.2.8 instead.***
+***ONLY Support @material-ui/core. If you want to use material-ui@beta version, please use v0.2.8 instead.***
 
 nextjs-mui-helper is a package for making a project with [nextjs](https://github.com/zeit/next.js/) and [material-ui](https://github.com/mui-org/material-ui) easier.
 
