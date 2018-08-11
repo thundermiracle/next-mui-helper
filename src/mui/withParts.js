@@ -17,10 +17,10 @@ const withParts = (muiTheme = null, Layout = null, enableNProgress = false, enab
   const cssBaselineHoc = enableDefaultCssBaseline ? withCssBaseline : null;
 
   return compose(
-    layoutHoc,
-    cssBaselineHoc, // inject global css before muiTheme
-    muiThemeHoc,
     progressBarHoc,
+    muiThemeHoc,
+    cssBaselineHoc, // inject global css before muiTheme
+    layoutHoc,
   );
 };
 

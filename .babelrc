@@ -22,7 +22,8 @@
           "./src/"
         ],
         "alias": {
-          "material-ui": "@material-ui/core"
+          "material-ui": "@material-ui/core",
+          "src": "./src"
         }
       }
     ]

@@ -1,21 +1,44 @@
-function makeNextExportPathMap(pathMap) {
-  if (!Array.isArray(pathMap)) return {};
+import * as R from 'ramda';
 
-  const nextExportPathMap = { '/': { page: '/' } };
-  pathMap.forEach(function (oneGroup) {
-    const baseUri = oneGroup.pathname;
-    const nameList = oneGroup.children;
-    if (nameList == null) {
-      const page = `/${baseUri}`;
-      nextExportPathMap[page] = { page };
-    } else {
-      nameList.forEach(function (oneName) {
-        const page = `/${baseUri}/${oneName}`;
-        nextExportPathMap[page] = { page };
-      });
-    }
-  });
-  return nextExportPathMap;
+const nilToEmpty = elem => (R.isNil(elem) ? '' : elem);
+const toArray = elem => (Array.isArray(elem) ? elem : [elem]);
+const formatToNextPathmap = uri => [uri, { page: uri }];
+
+function getUriList(basicUri, nameList) {
+  const composeUri = R.curry((base, subPath) => `/${base}/${subPath}`)(basicUri);
+  const makeRealUri = R.compose(
+    composeUri,
+    nilToEmpty,
+  );
+  return R.compose(
+    R.map(makeRealUri),
+    toArray,
+  )(nameList);
 }
 
-module.exports = makeNextExportPathMap;
+/**
+ * Flat pathMap to OBJECT which can be used to
+ * create static next.js site.
+ *
+ * The flatten OBJECT: { 'name of path': { page: 'absolute path'} }
+ * 
+ * @param {*array} pathMap [{pathname: pathname, children: null or array of subpath}]
+ */
+export default function makeNextExportPathMap(pathMap) {
+  if (!Array.isArray(pathMap)) return {};
+
+  const makeNextPathmapUriList = R.compose(
+    R.apply(getUriList),
+    R.props(['pathname', 'children']),
+  );
+
+  const allPathMap = R.compose(
+    R.fromPairs,
+    R.map(formatToNextPathmap),
+    R.flatten,
+    R.concat(['/']),
+    R.map(makeNextPathmapUriList),
+  )(pathMap);
+
+  return allPathMap;
+}
