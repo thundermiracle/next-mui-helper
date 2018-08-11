@@ -18,17 +18,17 @@ const withMuiTheme = theme => ((BaseComponent) => {
       this.styleContext = this.props.stylesContext || getContext(theme);
     }
 
-    static async getInitialProps(context) {
-      const props = await getInitialProps(BaseComponent, context);
-      return { ...props };
-    }
-
     componentDidMount() {
       // Remove the server-side injected CSS.
       const jssStyles = document.querySelector('#jss-server-side');
       if (jssStyles && jssStyles.parentNode) {
         jssStyles.parentNode.removeChild(jssStyles);
       }
+    }
+
+    static async getInitialProps(context) {
+      const props = await getInitialProps(BaseComponent, context);
+      return { ...props };
     }
 
     render() {

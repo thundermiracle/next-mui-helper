@@ -13,6 +13,6 @@ import compose from '../util/compose';
  * @param {MUITheme} theme
  */
 export default theme => compose(
-  extendsWithIntl,
   extendsWithMui(theme || defaultTheme),
+  extendsWithIntl,
 )(Document);
