@@ -1,6 +1,6 @@
 {
   "name": "nextjs-mui-helper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "hocs for making material-ui project with nextjs(SSR)",
   "main": "./src/mui/withParts.js",
   "scripts": {
@@ -8,7 +8,8 @@
     "build:rm": "rimraf dist/",
     "build:cp": "node ./scripts/copyFiles dist/ package.json README.md LICENSE",
     "build": "npm run build:rm && NODE_ENV=production babel src --out-dir ./dist && npm run build:cp",
-    "test": "npm run eslint"
+    "jest": "jest",
+    "test": "npm run eslint && npm run jest"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
   "dependencies": {
     "jss": "^9.5.1",
     "nprogress": "^0.2.0",
+    "ramda": "^0.25.0",
     "react-jss": "^8.2.1"
   },
   "peerDependencies": {
@@ -33,9 +35,11 @@
     "react-dom": "^15.0.0 || ^16.0.0"
   },
   "devDependencies": {
+    "@material-ui/core": "^1.0.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
+    "babel-jest": "^23.4.2",
     "babel-plugin-module-resolver": "^3.1.1",
     "babel-plugin-react-require": "^3.0.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
@@ -52,12 +56,15 @@
     "eslint-plugin-jest": "^21.15.1",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.8.2",
-    "jest": "^22.4.3",
-    "@material-ui/core": "^1.0.0",
+    "jest": "^23.5.0",
     "next": "^6.0.3",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
+    "regenerator-runtime": "^0.12.1",
     "rimraf": "^2.6.2"
+  },
+  "jest": {
+    "transform": {}
   }
 }
