@@ -1,20 +1,9 @@
 {
   "presets": [
-    "env",
-    "react"
+    "next/babel"
   ],
   "plugins": [
-    "transform-class-properties",
-    "transform-object-rest-spread",
     "react-require",
-    [
-      "transform-runtime",
-      {
-        "helpers": false,
-        "polyfill": false,
-        "regenerator": true
-      }
-    ],
     [
       "module-resolver",
       {
