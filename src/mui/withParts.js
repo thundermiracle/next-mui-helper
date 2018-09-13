@@ -25,3 +25,5 @@ const withParts = (muiTheme = null, Layout = null, enableNProgress = false, enab
 };
 
 export default withParts;
+
+export const defaultParts = withParts();

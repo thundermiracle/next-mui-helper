@@ -12,7 +12,11 @@ import compose from '../util/compose';
  * Including yahoo/intl, material-ui.
  * @param {MUITheme} theme
  */
-export default theme => compose(
+const makeNextDocument = theme => compose(
   extendsWithMui(theme || defaultTheme),
   extendsWithIntl,
 )(Document);
+
+export default makeNextDocument;
+
+export const DefaultNextDocument = makeNextDocument();
