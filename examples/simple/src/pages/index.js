@@ -1,11 +1,10 @@
 import React from 'react';
-import withParts from 'nextjs-mui-helper/mui/withParts';
 import Button from '@material-ui/core/Button';
 
 const Page1 = () => (
   <Button color="primary">
-    Hello World
+    Hello World, Page1!
   </Button>
 );
 
-export default withParts()(Page1);
+export default Page1;

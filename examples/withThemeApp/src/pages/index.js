@@ -2,8 +2,6 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import Link from 'next/link';
 
-import withAll from '../client/hoc/withAll';
-
 const Page1 = () => (
   <div>
     <Button color="primary">
@@ -17,4 +15,4 @@ const Page1 = () => (
   </div>
 );
 
-export default withAll(Page1);
+export default Page1;

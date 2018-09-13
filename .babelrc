@@ -1,9 +1,20 @@
 {
   "presets": [
-    "next/babel"
+    "env",
+    "react"
   ],
   "plugins": [
+    "transform-class-properties",
+    "transform-object-rest-spread",
     "react-require",
+    [
+      "transform-runtime",
+      {
+        "helpers": false,
+        "polyfill": false,
+        "regenerator": true
+      }
+    ],
     [
       "module-resolver",
       {
@@ -24,5 +35,7 @@
       ]
     }
   },
-  "ignore": ["node_modules/**"]
+  "ignore": [
+    "node_modules/**"
+  ]
 }
