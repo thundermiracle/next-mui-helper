@@ -1,10 +1,11 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
+import { defaultParts } from '../src/mui/withParts';
 
 const Page1 = () => (
   <Button color="primary">
-    Hello World, Page1!
+    Hello World
   </Button>
 );
 
-export default Page1;
+export default defaultParts(Page1);

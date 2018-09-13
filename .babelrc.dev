@@ -1,0 +1,21 @@
+{
+  "presets": [
+    "next/babel"
+  ],
+  "plugins": [
+    "react-require",
+    [
+      "module-resolver",
+      {
+        "root": [
+          "./src/"
+        ],
+        "alias": {
+          "material-ui": "@material-ui/core",
+          "src": "./src"
+        }
+      }
+    ]
+  ],
+  "ignore": ["node_modules/**"]
+}

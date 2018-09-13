@@ -1,6 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Head, Main, NextScript } from 'next/document';
-import JssProvider from 'react-jss/lib/JssProvider';
 
 import getContext from '../util/getContext';
 
@@ -13,38 +13,70 @@ import getContext from '../util/getContext';
 const extendsWithMui = theme => ((DocumentComponent) => {
   class ExtendsWithMui extends DocumentComponent {
     static async getInitialProps(ctx) {
-      const props = await super.getInitialProps(ctx);
+      // Resolution order
+      //
+      // On the server:
+      // 1. app.getInitialProps
+      // 2. page.getInitialProps
+      // 3. document.getInitialProps
+      // 4. app.render
+      // 5. page.render
+      // 6. document.render
+      //
+      // On the server with error:
+      // 1. document.getInitialProps
+      // 2. app.render
+      // 3. page.render
+      // 4. document.render
+      //
+      // On the client
+      // 1. app.getInitialProps
+      // 2. page.getInitialProps
+      // 3. app.render
+      // 4. page.render
+      const superProps = await super.getInitialProps(ctx);
 
-      const stylesContext = getContext(theme);
-      // eslint-disable-next-line react/display-name
-      const page = ctx.renderPage(Component => cprops => (
-        <JssProvider
-          registry={stylesContext.sheetsRegistry}
-          generateClassName={stylesContext.generateClassName}
-        >
-          <Component stylesContext={stylesContext} {...cprops} />
-        </JssProvider>
-      ));
+      // inject theme by hoc
+      let pageContext;
+      const page = ctx.renderPage((Component) => {
+        const WrappedComponent = (props) => {
+          // pageContext = props.pageContext;
+          pageContext = props.pageContext || getContext(theme);
+          return <Component {...props} pageContext={pageContext} />;
+        };
 
-      const { head } = props;
-      const jssStyles = (
-        <style
-          id="jss-server-side"
-          dangerouslySetInnerHTML={{ __html: stylesContext.sheetsRegistry.toString() }}
-        />
-      );
-      head.push(jssStyles);
+        WrappedComponent.propTypes = {
+          pageContext: PropTypes.object,
+        };
+
+        WrappedComponent.defaultProps = {
+          pageContext: null,
+        };
+
+        return WrappedComponent;
+      });
+
+      const { head } = superProps;
+      if (pageContext != null) {
+        const jssStyles = (
+          <style
+            id="jss-server-side"
+            dangerouslySetInnerHTML={{ __html: pageContext.sheetsRegistry.toString() }}
+          />
+        );
+        head.push(jssStyles);
+      }
 
       return {
-        ...props,
+        ...superProps,
         ...page,
         head,
-        stylesContext,
+        pageContext,
       };
     }
 
     render() {
-      const { stylesContext } = this.props;
+      const { pageContext } = this.props;
 
       return (
         <html lang="en">
@@ -53,13 +85,14 @@ const extendsWithMui = theme => ((DocumentComponent) => {
             {/* Use minimum-scale=1 to enable GPU rasterization */}
             <meta
               name="viewport"
-              content={
-                'user-scalable=0, initial-scale=1, ' +
-                'minimum-scale=1, width=device-width, height=device-height'
-              }
+              content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
             />
             {/* PWA primary color */}
-            <meta name="theme-color" content={stylesContext.theme.palette.primary[500]} />
+            <meta name="theme-color" content={pageContext.theme.palette.primary.main} />
+            <link
+              rel="stylesheet"
+              href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
+            />
           </Head>
           <body>
             <Main />

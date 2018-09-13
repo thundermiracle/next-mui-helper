@@ -55,6 +55,16 @@ export default withParts()(Page1);
 ```
 That's it! Want to inject your own theme? See following instructions.
 
+### About step2, you also can create a _app.js under the pages folder.
+
+```jsx
+import makeNextApp from 'nextjs-mui-helper/nextjs/makeNextApp';
+
+export default makeNextApp();
+```
+
+
+
 ## Instructions
 
 * **nextjs/makeNextDocument**
@@ -71,6 +81,10 @@ That's it! Want to inject your own theme? See following instructions.
 | 2 |  layout | null | Layout component(like ```<Layout>{childrend}</Layout>)``` |
 | 3 |  enable nprogress | false | enable progress bar made by [nprogress](https://github.com/rstacruz/nprogress) |
 | 4 |  enable CssBaseline | true | enable material-ui's default [CssBaseline](https://material-ui-next.com/style/css-baseline/) |
+
+* **nextjs/makeNextApp**
+
+Same with withParts. But can be used to create a _app.js file.
 
 ## Examples
 

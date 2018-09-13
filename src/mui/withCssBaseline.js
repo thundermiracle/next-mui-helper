@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Reboot, CssBaseline } from 'material-ui';
+import { CssBaseline } from 'material-ui';
 import getInitialProps from '../util/getInitialProps';
 
 /**
@@ -8,8 +8,7 @@ import getInitialProps from '../util/getInitialProps';
  */
 const withCssBaseline = (BaseComponent) => {
   const InjectMUICssBaseline = (props) => {
-    // mui < beta36: reboot; mui >= beta37 : CssBaseline
-    const CssBaselineWrapper = CssBaseline == null ? Reboot : CssBaseline;
+    const CssBaselineWrapper = CssBaseline;
 
     return (
       <div>

@@ -1,3 +1,3 @@
-import makeNextDocument from 'nextjs-mui-helper/nextjs/makeNextDocument';
+import { DefaultNextDocument } from 'nextjs-mui-helper/nextjs/makeNextDocument';
 
-export default makeNextDocument();
+export default DefaultNextDocument;

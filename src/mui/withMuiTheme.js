@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import { MuiThemeProvider } from 'material-ui/styles';
+import JssProvider from 'react-jss/lib/JssProvider';
 
 import getInitialProps from '../util/getInitialProps';
 import getContext from '../util/getContext';
@@ -12,10 +13,9 @@ import getContext from '../util/getContext';
  */
 const withMuiTheme = theme => ((BaseComponent) => {
   class InjectMuiTheme extends PureComponent {
-    constructor(props, context) {
-      super(props, context);
-
-      this.styleContext = this.props.stylesContext || getContext(theme);
+    constructor(props) {
+      super(props);
+      this.pageContext = props.pageContext || getContext(theme);
     }
 
     componentDidMount() {
@@ -25,30 +25,39 @@ const withMuiTheme = theme => ((BaseComponent) => {
         jssStyles.parentNode.removeChild(jssStyles);
       }
     }
-
+    
     static async getInitialProps(context) {
       const props = await getInitialProps(BaseComponent, context);
       return { ...props };
     }
 
+    pageContext = null;
+
     render() {
+      const pageContext = this.props.pageContext || this.pageContext;
+
       return (
-        <MuiThemeProvider
-          theme={this.styleContext.theme}
-          sheetsManager={this.styleContext.sheetsManager}
+        <JssProvider
+          registry={pageContext.sheetsRegistry}
+          generateClassName={pageContext.generateClassName}
         >
-          <BaseComponent {...this.props} />
-        </MuiThemeProvider>
+          <MuiThemeProvider
+            theme={pageContext.theme}
+            sheetsManager={pageContext.sheetsManager}
+          >
+            <BaseComponent {...this.props} pageContext={pageContext} />
+          </MuiThemeProvider>
+        </JssProvider>
       );
     }
   }
 
   InjectMuiTheme.propTypes = {
-    stylesContext: PropTypes.object,
+    pageContext: PropTypes.object,
   };
 
   InjectMuiTheme.defaultProps = {
-    stylesContext: null,
+    pageContext: null,
   };
 
   return InjectMuiTheme;

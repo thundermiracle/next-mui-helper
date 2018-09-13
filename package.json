@@ -1,14 +1,15 @@
 {
   "name": "nextjs-mui-helper",
-  "version": "1.0.1",
-  "description": "hocs for making material-ui project with nextjs(SSR)",
+  "version": "1.0.2",
+  "description": "hocs for making material-ui project with next.js(SSR)",
   "main": "./src/mui/withParts.js",
   "scripts": {
     "eslint": "eslint ./src",
-    "build:rm": "rimraf dist/",
+    "build:rm": "rm -rf dist/",
     "build:cp": "node ./scripts/copyFiles dist/ package.json README.md LICENSE",
-    "build": "npm run build:rm && NODE_ENV=production babel src --out-dir ./dist && npm run build:cp",
+    "build": "npm run build:rm && NODE_ENV=production babel src --compact=true --out-dir ./dist && npm run build:cp",
     "jest": "jest",
+    "dev": "next",
     "test": "npm run eslint && npm run jest"
   },
   "repository": {
@@ -23,19 +24,19 @@
     "util"
   ],
   "dependencies": {
-    "jss": "^9.5.1",
+    "jss": "^9.8.7",
     "nprogress": "^0.2.0",
     "ramda": "^0.25.0",
-    "react-jss": "^8.2.1"
+    "react-jss": "^8.6.1"
   },
   "peerDependencies": {
-    "@material-ui/core": "^1.0",
+    "@material-ui/core": "^1.0 || ^3.0",
     "next": "^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0",
     "react": "^15.0.0 || ^16.0.0",
     "react-dom": "^15.0.0 || ^16.0.0"
   },
   "devDependencies": {
-    "@material-ui/core": "^1.0.0",
+    "@material-ui/core": "^3.0.3",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
@@ -44,7 +45,7 @@
     "babel-plugin-react-require": "^3.0.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-plugin-transform-react-remove-prop-types": "^0.4.13",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.15",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
@@ -57,12 +58,11 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.8.2",
     "jest": "^23.5.0",
-    "next": "^6.0.3",
-    "prop-types": "^15.6.1",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "regenerator-runtime": "^0.12.1",
-    "rimraf": "^2.6.2"
+    "next": "^6.1.2",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
+    "regenerator-runtime": "^0.12.1"
   },
   "jest": {
     "transform": {}
