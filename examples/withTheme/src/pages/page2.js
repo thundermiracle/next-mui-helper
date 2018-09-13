@@ -4,17 +4,17 @@ import Link from 'next/link';
 
 import withAll from '../client/hoc/withAll';
 
-const Page1 = () => (
+const Page2 = () => (
   <div>
     <Button color="primary">
-      Hello World Page1!
+      Hello World Page2!
     </Button>
     <div>
-      <Link href="/page2">
-        <Button>To Page2</Button>
+      <Link href="/">
+        <Button>To Page1</Button>
       </Link>
     </div>
   </div>
 );
 
-export default withAll(Page1);
+export default withAll(Page2);
