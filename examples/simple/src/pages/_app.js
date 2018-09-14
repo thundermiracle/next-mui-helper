@@ -1,3 +1,3 @@
-import { DefaultNextApp } from 'nextjs-mui-helper/nextjs/makeNextApp';
+import { DefaultNextApp } from 'next-mui-helper/nextjs/makeNextApp';
 
 export default DefaultNextApp;

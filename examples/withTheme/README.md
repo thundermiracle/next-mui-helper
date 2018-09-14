@@ -1,10 +1,10 @@
 ## Description
 
-Example of inject theme and layout with nextjs-mui-helper.
+Example of inject theme and layout with next-mui-helper.
 
 ## How to use
 
-[clone the repo](https://github.com/thundermiracle/nextjs-mui-helper)
+[clone the repo](https://github.com/thundermiracle/next-mui-helper)
 
 ```sh
 cd examples/withTheme

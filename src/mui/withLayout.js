@@ -9,7 +9,7 @@ import getInitialProps from '../util/getInitialProps';
 const withLayout = Layout => ((Page) => {
   const InjectLayout = (props) => {
     return (
-      <Layout {...props} >
+      <Layout {...props}>
         <Page {...props} />
       </Layout>
     );

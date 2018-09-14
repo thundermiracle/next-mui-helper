@@ -15,8 +15,8 @@ test('pathmap.children is not null', () => {
 
   const expected = {
     '/': rootPath,
-    '/root/sub1': { page: '/root/sub1/' },
-    '/root/sub2': { page: '/root/sub2/' },
+    '/root/sub1': { page: '/root/sub1' },
+    '/root/sub2': { page: '/root/sub2' },
   };
 
   expect(result).toEqual(expected);
@@ -29,7 +29,7 @@ test('pathmap.children is null', () => {
 
   const expected = {
     '/': rootPath,
-    '/root/': { page: '/root/' },
+    '/root': { page: '/root' },
   };
 
   expect(result).toEqual(expected);
@@ -44,8 +44,8 @@ test('pathmap is normal', () => {
 
   const expected = {
     '/': rootPath,
-    '/spiral/': { page: '/spiral/' },
-    '/sunflower/': { page: '/sunflower/' },
+    '/spiral': { page: '/spiral' },
+    '/sunflower': { page: '/sunflower' },
   };
 
   expect(result).toEqual(expected);
