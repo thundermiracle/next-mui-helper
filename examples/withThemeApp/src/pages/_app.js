@@ -1,4 +1,4 @@
-import makeNextApp from 'nextjs-mui-helper/nextjs/makeNextApp';
+import makeNextApp from 'next-mui-helper/nextjs/makeNextApp';
 
 import CommonLayout from '../client/layout/CommonLayout';
 import theme from '../client/style/theme';

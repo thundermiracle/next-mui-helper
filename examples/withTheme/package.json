@@ -1,7 +1,7 @@
 {
   "name": "withtheme",
   "version": "1.0.0",
-  "description": "example of inject theme and layout with nextjs-mui-helper",
+  "description": "example of inject theme and layout with next-mui-helper",
   "scripts": {
     "dev": "next ./src"
   },
@@ -11,7 +11,7 @@
     "@material-ui/core": "latest",
     "@material-ui/icons": "latest",
     "next": "latest",
-    "nextjs-mui-helper": "latest",
+    "next-mui-helper": "latest",
     "prop-types": "latest",
     "react": "latest",
     "react-dom": "latest"

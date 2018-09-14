@@ -1,4 +1,4 @@
-import makeNextDocument from 'nextjs-mui-helper/nextjs/makeNextDocument';
+import makeNextDocument from 'next-mui-helper/nextjs/makeNextDocument';
 
 import theme from '../client/style/theme';
 

@@ -13,6 +13,8 @@ import getContext from '../util/getContext';
  */
 const withMuiTheme = theme => ((BaseComponent) => {
   class InjectMuiTheme extends PureComponent {
+    pageContext = null;
+
     constructor(props) {
       super(props);
       this.pageContext = props.pageContext || getContext(theme);
@@ -31,9 +33,8 @@ const withMuiTheme = theme => ((BaseComponent) => {
       return { ...props };
     }
 
-    pageContext = null;
-
     render() {
+      // eslint-disable-next-line react/destructuring-assignment
       const pageContext = this.props.pageContext || this.pageContext;
 
       return (

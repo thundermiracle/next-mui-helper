@@ -5,7 +5,7 @@ const toArray = elem => (Array.isArray(elem) ? elem : [elem]);
 const formatToNextPathmap = uri => [uri, { page: uri }];
 
 function getUriList(basicUri, nameList) {
-  const composeUri = R.curry((base, subPath) => `/${base}/${subPath}`)(basicUri);
+  const composeUri = R.curry((base, subPath) => `/${base}${subPath === '' ? '' : `/${subPath}`}`)(basicUri);
   const makeRealUri = R.compose(
     composeUri,
     nilToEmpty,
@@ -36,7 +36,7 @@ export default function makeNextExportPathMap(pathMap) {
     R.fromPairs,
     R.map(formatToNextPathmap),
     R.flatten,
-    R.concat(['/']),
+    R.concat(['/']), // add root path
     R.map(makeNextPathmapUriList),
   )(pathMap);
 
