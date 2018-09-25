@@ -13,3 +13,5 @@ yarn.lock
 **/yarn.lock
 
 coverage/**/*
+
+.babelrc
