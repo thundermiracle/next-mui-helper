@@ -7,7 +7,7 @@
     "eslint": "eslint ./src",
     "build:rm": "rm -rf dist/",
     "build:cp": "node ./scripts/copyFiles dist/ package.json README.md CHANGELOG.md LICENSE",
-    "build": "npm run build:rm && cp .babelrc.prod .babelrc && NODE_ENV=production babel src --out-dir ./dist && npm run build:cp",
+    "build": "npm run build:rm && cp .babelrc.prod .babelrc && NODE_ENV=production babel src --out-dir ./dist --verbose && npm run build:cp",
     "jest": "jest",
     "dev": "cp .babelrc.dev .babelrc && next",
     "test": "cp .babelrc.prod .babelrc && npm run eslint && npm run jest"
