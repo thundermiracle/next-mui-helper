@@ -1,18 +1,16 @@
 {
   "presets": [
-    "env",
-    "react"
+    "@babel/env",
+    "@babel/react"
   ],
   "plugins": [
     "add-module-exports",
-    "transform-class-properties",
-    "transform-object-rest-spread",
-    "react-require",
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-object-rest-spread",
     [
-      "transform-runtime",
+      "@babel/plugin-transform-runtime",
       {
         "helpers": false,
-        "polyfill": false,
         "regenerator": true
       }
     ],
@@ -20,7 +18,7 @@
       "module-resolver",
       {
         "root": [
-          "./src/"
+          "./src"
         ],
         "alias": {
           "material-ui": "@material-ui/core",

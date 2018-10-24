@@ -1,9 +1,10 @@
 {
     "compilerOptions": {
         "experimentalDecorators": true,
-        "baseUrl": "./",
+        "baseUrl": ".",
         "paths": {
-            "src/*": ["./src/*"]
+            "*": ["src/*"],
+            "material-ui": ["@material-ui/core"]
         }
     },
     "exclude": [
