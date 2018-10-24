@@ -24,7 +24,7 @@ function ButtonAppBar(props) {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <Typography variant="title" color="inherit" className={classes.flex}>
+          <Typography variant="h6" color="inherit" className={classes.flex}>
             Title
           </Typography>
         </Toolbar>
