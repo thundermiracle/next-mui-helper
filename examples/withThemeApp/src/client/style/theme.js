@@ -5,6 +5,9 @@ const theme = {
     primary: deepOrange,
     secondary: teal,
   },
+  typography: {
+    useNextVariants: true,
+  },
 };
 
 export default theme;

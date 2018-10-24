@@ -62,6 +62,7 @@ const extendsWithMui = theme => ((DocumentComponent) => {
         const jssStyles = (
           <style
             id="jss-server-side"
+            key="jss-server-side-key"
             dangerouslySetInnerHTML={{ __html: pageContext.sheetsRegistry.toString() }}
           />
         );
