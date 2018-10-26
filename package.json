@@ -1,6 +1,6 @@
 {
   "name": "next-mui-helper",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "hocs for making material-ui project with next.js(SSR)",
   "main": "./src/mui/withParts.js",
   "scripts": {

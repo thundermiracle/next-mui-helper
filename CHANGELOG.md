@@ -1,5 +1,16 @@
 ### [Versions](https://github.com/thundermiracle/next-mui-helper/releases/)
 
+## 1.1.1
+###### *Oct 26, 2018*
+
+#### Breaking Changes
+
+N/A
+
+#### Changes
+
+- Fix the bug of makeNextApp.js losing props in hoc
+
 ## 1.1.0
 ###### *Oct 24, 2018*
 
