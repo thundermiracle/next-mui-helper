@@ -4,9 +4,9 @@ import Link from 'next/link';
 
 const Index = () => (
   <div>
-    <Button color="primary">Hello World</Button>
-    <Link href="/page1">
-      <Button>To Page1</Button>
+    Page1 contentsssssssssssssss...
+    <Link href="/">
+      <Button>To Top</Button>
     </Link>
   </div>
 );
