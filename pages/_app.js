@@ -1,3 +1,16 @@
-import { DefaultNextApp } from '../src/nextjs/makeNextApp';
+import React from 'react';
 
-export default DefaultNextApp;
+import makeNextApp from '../src/nextjs/makeNextApp';
+
+const Layout = (props) => {
+  return (
+    <div>
+      [Layout]
+      <div>
+        {props.children}
+      </div>
+    </div>
+  );
+};
+
+export default makeNextApp(null, Layout);
