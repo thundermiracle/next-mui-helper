@@ -20,6 +20,10 @@ There are several steps to enable SSR in next.js with material-ui which may be l
 
 This package wraps those steps and you can achieve the goal with only `two` steps. 
 
+## Used By
+
+* [next-boilerplate](https://github.com/thundermiracle/next-boilerplate) simple boilerplate of next.js. With material-ui, google analytics, customized export, simple layout support.
+
 ## Installation
 
 next-mui-helper is available as an [npm package](https://www.npmjs.org/package/next-mui-helper).
@@ -30,7 +34,7 @@ npm install --save next-mui-helper
 
 ## Steps
 
-1. Create a _document.js under the pages folder.
+1. Create _document.js under the pages folder.
 
 ```jsx
 import makeNextDocument from 'next-mui-helper/nextjs/makeNextDocument';
@@ -55,7 +59,7 @@ export default withParts()(Page1);
 ```
 That's it! Want to inject your own theme? See following instructions.
 
-### About step2, you also can create a _app.js under the pages folder.
+### About step2, you also can create _app.js under the pages folder instead.
 
 ```jsx
 import makeNextApp from 'next-mui-helper/nextjs/makeNextApp';
