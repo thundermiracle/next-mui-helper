@@ -1,4 +1,4 @@
-import { blue, pink } from 'material-ui/colors';
+import { blue, pink } from '@material-ui/core/colors';
 
 export default {
   palette: {

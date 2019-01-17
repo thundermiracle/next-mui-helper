@@ -1,4 +1,4 @@
-import makeWidgetMap from 'src/util/makeWidgetMap';
+import makeWidgetMap from '../../src/util/makeWidgetMap';
 
 const input = { name1: 'Jack', name2: 'Frank', name3: 'Billy' };
 const inputWithInvalidKeys = { name1: 'Jack', name2: 'Frank', 23: 'No name', name3: 'Billy' };

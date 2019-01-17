@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import { MuiThemeProvider } from 'material-ui/styles';
+import { MuiThemeProvider } from '@material-ui/core/styles';
 import JssProvider from 'react-jss/lib/JssProvider';
 
 import getInitialProps from '../util/getInitialProps';

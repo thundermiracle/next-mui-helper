@@ -1,4 +1,4 @@
-import pipe from 'src/util/pipe';
+import pipe from '../../src/util/pipe';
 
 const func1 = name => `My name is ${name}`;
 const func2 = null;

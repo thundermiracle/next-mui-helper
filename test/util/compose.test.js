@@ -1,4 +1,4 @@
-import compose from 'src/util/compose';
+import compose from '../../src/util/compose';
 
 const func1 = name => `My name is ${name}`;
 const func2 = null;
