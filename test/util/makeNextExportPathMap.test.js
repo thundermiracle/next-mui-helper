@@ -1,4 +1,4 @@
-import makeNextExportPathMap from 'src/util/makeNextExportPathMap';
+import makeNextExportPathMap from '../../src/util/makeNextExportPathMap';
 
 const rootPath = { page: '/' };
 

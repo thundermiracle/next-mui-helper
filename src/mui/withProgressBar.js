@@ -3,7 +3,7 @@ import React from 'react';
 import NProgress from 'nprogress';
 import Router from 'next/router';
 
-import { withStyles } from 'material-ui/styles';
+import { withStyles } from '@material-ui/core/styles';
 import getInitialProps from '../util/getInitialProps';
 
 // Disaply a progress bar between route transitions

@@ -22,7 +22,7 @@ This package wraps those steps and you can achieve the goal with only `two` step
 
 ## Used By
 
-* [next-boilerplate](https://github.com/thundermiracle/next-boilerplate) simple boilerplate of next.js. With material-ui, google analytics, customized export, simple layout support.
+* [next-boilerplate](https://github.com/thundermiracle/next-boilerplate) simple boilerplate of next.js. With material-ui, google analytics, customizable export, simple layout support.
 
 ## Installation
 
@@ -47,7 +47,7 @@ export default makeNextDocument();
 ```jsx
 import React from 'react';
 import withParts from 'next-mui-helper/mui/withParts';
-import Button from 'material-ui/Button';
+import Button from '@material-ui/core/Button';
 
 const Page1 = () => (
   <Button color="primary">
@@ -59,7 +59,7 @@ export default withParts()(Page1);
 ```
 That's it! Want to inject your own theme? See following instructions.
 
-### About step2, you also can create _app.js under the pages folder instead.
+### About step2, you also can create _app.js under the pages folder instead. See [this example](/examples/withThemeApp).
 
 ```jsx
 import makeNextApp from 'next-mui-helper/nextjs/makeNextApp';
@@ -93,6 +93,16 @@ Same with withParts. But can be used to create a _app.js file.
 ## Examples
 
 You can find some examples under the [./example](/examples) folder.
+
+OR
+
+Open them in CodeSandbox:
+
+1. simple:　[[simple] in CodeSandbox](https://codesandbox.io/s/github/thundermiracle/next-mui-helper/tree/master/examples/simple)
+
+1. withTheme:　[[withTheme] in CodeSandbox]((https://codesandbox.io/s/github/thundermiracle/next-mui-helper/tree/master/examples/withTheme?module=%2Fsrc%2Fpages%2Findex.js))
+
+1. withThemeApp:　[[withThemeApp] in CodeSandbox](https://codesandbox.io/s/github/thundermiracle/next-mui-helper/tree/master/examples/withThemeApp?module=%2Fsrc%2Fpages%2Findex.js)
 
 ## License
 

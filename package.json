@@ -7,10 +7,10 @@
     "eslint": "eslint ./src",
     "build:rm": "rm -rf dist/",
     "build:cp": "node ./scripts/copyFiles dist/ package.json README.md CHANGELOG.md LICENSE",
-    "build": "npm run build:rm && cp .babelrc.prod .babelrc && NODE_ENV=production babel src --out-dir ./dist --verbose && npm run build:cp",
+    "build": "npm run build:rm && cross-env NODE_ENV=production babel src --out-dir ./dist --verbose && npm run build:cp",
     "jest": "jest",
-    "dev": "cp .babelrc.dev .babelrc && next",
-    "test": "cp .babelrc.prod .babelrc && npm run eslint && npm run jest"
+    "dev": "next",
+    "test": "cross-env NODE_ENV=production npm run eslint && cross-env NODE_ENV=production npm run jest"
   },
   "repository": {
     "type": "git",
@@ -26,7 +26,7 @@
   "dependencies": {
     "jss": "^9.8.7",
     "nprogress": "^0.2.0",
-    "ramda": "^0.25.0",
+    "ramda": "^0.26.1",
     "react-jss": "^8.6.1"
   },
   "peerDependencies": {
@@ -48,13 +48,12 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
     "babel-plugin-add-module-exports": "^1.0.0",
-    "babel-plugin-module-resolver": "^3.1.1",
     "babel-plugin-react-require": "^3.0.1",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.19",
+    "cross-env": "^5.2.0",
     "eslint": "^5.7.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-react": "^1.1.7",
-    "eslint-import-resolver-babel-module": "^5.0.0-beta.1",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jest": "^21.26.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
