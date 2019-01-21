@@ -100,7 +100,7 @@ Open them in CodeSandbox:
 
 1. simple:　[[simple] in CodeSandbox](https://codesandbox.io/s/github/thundermiracle/next-mui-helper/tree/master/examples/simple)
 
-1. withTheme:　[[withTheme] in CodeSandbox]((https://codesandbox.io/s/github/thundermiracle/next-mui-helper/tree/master/examples/withTheme?module=%2Fsrc%2Fpages%2Findex.js))
+1. withTheme:　[[withTheme] in CodeSandbox](https://codesandbox.io/s/github/thundermiracle/next-mui-helper/tree/master/examples/withTheme?module=%2Fsrc%2Fpages%2Findex.js)
 
 1. withThemeApp:　[[withThemeApp] in CodeSandbox](https://codesandbox.io/s/github/thundermiracle/next-mui-helper/tree/master/examples/withThemeApp?module=%2Fsrc%2Fpages%2Findex.js)
 

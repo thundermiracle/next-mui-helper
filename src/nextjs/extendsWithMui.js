@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Head, Main, NextScript } from 'next/document';
 
 import getContext from '../util/getContext';
+import getDisplayName from '../util/getDisplayName';
 
 /**
  * Enable material-ui in nextjs._document.
@@ -12,6 +13,8 @@ import getContext from '../util/getContext';
  */
 const extendsWithMui = theme => ((DocumentComponent) => {
   class ExtendsWithMui extends DocumentComponent {
+    static displayName = `extendsWithMui(${getDisplayName(DocumentComponent)})`;
+
     static async getInitialProps(ctx) {
       // Resolution order
       //

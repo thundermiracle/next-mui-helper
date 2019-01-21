@@ -1,22 +1,26 @@
 import React from 'react';
 
 import getInitialProps from '../util/getInitialProps';
+import getDisplayName from '../util/getDisplayName';
 
 /**
  * inject Layout
  * @param {Component} Layout 
  */
-const withLayout = Layout => ((Page) => {
+const withLayout = Layout => ((BaseComponent) => {
   const InjectLayout = (props) => {
     return (
       <Layout {...props}>
-        <Page {...props} />
+        <BaseComponent {...props} />
       </Layout>
     );
   };
 
+  // wrap displayName for easier debug
+  InjectLayout.displayName = `withLayout(${getDisplayName(BaseComponent)})`;
+
   InjectLayout.getInitialProps = async (context) => {
-    const props = await getInitialProps(Page, context);
+    const props = await getInitialProps(BaseComponent, context);
 
     // Get menu info
     const { pathname } = context;
