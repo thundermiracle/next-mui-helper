@@ -6,6 +6,7 @@ import JssProvider from 'react-jss/lib/JssProvider';
 
 import getInitialProps from '../util/getInitialProps';
 import getContext from '../util/getContext';
+import getDisplayName from '../util/getDisplayName';
 
 /**
  * inject Mui Theme
@@ -14,6 +15,9 @@ import getContext from '../util/getContext';
 const withMuiTheme = theme => ((BaseComponent) => {
   class InjectMuiTheme extends PureComponent {
     pageContext = null;
+
+    // wrap displayName for easier debug
+    static displayName = `withMuiTheme(${getDisplayName(BaseComponent)})`;
 
     constructor(props) {
       super(props);

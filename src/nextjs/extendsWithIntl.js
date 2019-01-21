@@ -1,4 +1,5 @@
 import React from 'react';
+import getDisplayName from '../util/getDisplayName';
 
 /**
  * Enable yahoo/intl in nextjs._document.
@@ -8,6 +9,8 @@ import React from 'react';
  */
 const extendsWithIntl = (DocumentComponent) => {
   class ExtendsWithIntl extends DocumentComponent {
+    static displayName = `extendsWithIntl(${getDisplayName(DocumentComponent)})`;
+
     static async getInitialProps(ctx) {
       const props = await super.getInitialProps(ctx);
 

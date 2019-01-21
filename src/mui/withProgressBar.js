@@ -5,6 +5,7 @@ import Router from 'next/router';
 
 import { withStyles } from '@material-ui/core/styles';
 import getInitialProps from '../util/getInitialProps';
+import getDisplayName from '../util/getDisplayName';
 
 // Disaply a progress bar between route transitions
 NProgress.configure({
@@ -85,11 +86,10 @@ const styles = theme => ({
  * inject nprogress with NextJs.Router
  */
 const withProgressBar = (BaseComponent) => {
-  const InjectProgressBar = (props) => {
-    return (
-      <BaseComponent {...props} />
-    );
-  };
+  const InjectProgressBar = props => <BaseComponent {...props} />;
+
+  // wrap displayName for easier debug
+  InjectProgressBar.displayName = `withProgressBar(${getDisplayName(BaseComponent)})`;
 
   InjectProgressBar.getInitialProps = async (context) => {
     const props = await getInitialProps(BaseComponent, context);
