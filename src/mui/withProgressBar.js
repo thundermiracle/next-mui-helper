@@ -2,9 +2,9 @@ import React from 'react';
 
 import NProgress from 'nprogress';
 import Router from 'next/router';
+import hoistStatics from 'hoist-non-react-statics';
 
 import { withStyles } from '@material-ui/core/styles';
-import getInitialProps from '../util/getInitialProps';
 import getDisplayName from '../util/getDisplayName';
 
 // Disaply a progress bar between route transitions
@@ -91,10 +91,8 @@ const withProgressBar = (BaseComponent) => {
   // wrap displayName for easier debug
   InjectProgressBar.displayName = `withProgressBar(${getDisplayName(BaseComponent)})`;
 
-  InjectProgressBar.getInitialProps = async (context) => {
-    const props = await getInitialProps(BaseComponent, context);
-    return { ...props };
-  };
+  // hoist all static functions
+  hoistStatics(InjectProgressBar, BaseComponent);
 
   return withStyles(styles)(InjectProgressBar);
 };

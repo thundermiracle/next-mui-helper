@@ -1,5 +1,7 @@
 import React from 'react';
 
+import hoistStatics from 'hoist-non-react-statics';
+
 import getInitialProps from '../util/getInitialProps';
 import getDisplayName from '../util/getDisplayName';
 
@@ -28,11 +30,15 @@ const withLayout = Layout => ((BaseComponent) => {
     // get title from pathname
     let title;
     if (pathname && pathname !== '') {
-      title = pathname.slice(pathname.lastIndexOf('/') + 1);
+      [title] = pathname.split('/').reverse();
+      // title = pathname.slice(pathname.lastIndexOf('/') + 1);
     }
 
     return { ...props, title };
   };
+
+  // hoist all static functions
+  hoistStatics(InjectLayout, BaseComponent);
 
   return InjectLayout;
 });
