@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import JssProvider from 'react-jss/lib/JssProvider';
+import hoistStatics from 'hoist-non-react-statics';
 
-import getInitialProps from '../util/getInitialProps';
 import getContext from '../util/getContext';
 import getDisplayName from '../util/getDisplayName';
 
@@ -30,11 +30,6 @@ const withMuiTheme = theme => ((BaseComponent) => {
       if (jssStyles && jssStyles.parentNode) {
         jssStyles.parentNode.removeChild(jssStyles);
       }
-    }
-    
-    static async getInitialProps(context) {
-      const props = await getInitialProps(BaseComponent, context);
-      return { ...props };
     }
 
     render() {
@@ -64,6 +59,9 @@ const withMuiTheme = theme => ((BaseComponent) => {
   InjectMuiTheme.defaultProps = {
     pageContext: null,
   };
+
+  // hoist all static functions
+  hoistStatics(InjectMuiTheme, BaseComponent);
 
   return InjectMuiTheme;
 });

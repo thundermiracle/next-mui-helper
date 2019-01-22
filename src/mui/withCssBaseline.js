@@ -1,7 +1,8 @@
 import React from 'react';
 
+import hoistStatics from 'hoist-non-react-statics';
+
 import { CssBaseline } from '@material-ui/core';
-import getInitialProps from '../util/getInitialProps';
 import getDisplayName from '../util/getDisplayName';
 
 /**
@@ -22,10 +23,8 @@ const withCssBaseline = (BaseComponent) => {
   // wrap displayName for easier debug
   InjectMUICssBaseline.displayName = `withCssBaseline(${getDisplayName(BaseComponent)})`;
 
-  InjectMUICssBaseline.getInitialProps = async (context) => {
-    const props = await getInitialProps(BaseComponent, context);
-    return { ...props };
-  };
+  // hoist all static functions
+  hoistStatics(InjectMUICssBaseline, BaseComponent);
 
   return InjectMUICssBaseline;
 };
