@@ -1,9 +1,9 @@
 import { SheetsRegistry } from 'jss';
 import { createMuiTheme, createGenerateClassName } from '@material-ui/core/styles';
 
-function createContext(theme) {
+function createContext(themeObj) {
   return {
-    theme,
+    theme: createMuiTheme(themeObj),
     // eslint-disable-next-line no-undef
     sheetsManager: new Map(),
     // This is needed in order to inject the critical CSS.
@@ -13,19 +13,19 @@ function createContext(theme) {
   };
 }
 
-export default function getContext(themeObj) {
-  const theme = createMuiTheme(themeObj);
+let pageContext;
 
+export default function getContext(themeObj) {
   // Make sure to create a new store for every server-side request so that data
   // isn't shared between connections (which would be bad)
   if (!process.browser) {
-    return createContext(theme);
+    return createContext(themeObj);
   }
 
   // Reuse context on the client-side
-  if (!global.__INIT_MATERIAL_UI__) {
-    global.__INIT_MATERIAL_UI__ = createContext(theme);
+  if (!pageContext) {
+    pageContext = createContext(themeObj);
   }
 
-  return global.__INIT_MATERIAL_UI__;
+  return pageContext;
 }
