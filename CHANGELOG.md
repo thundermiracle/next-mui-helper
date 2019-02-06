@@ -1,5 +1,16 @@
 ### [Versions](https://github.com/thundermiracle/next-mui-helper/releases/)
 
+## 1.2.0
+###### *Feb 6, 2019*
+
+#### Breaking Changes
+
+- Auto hoist all static props
+
+#### Changes
+
+- Add displayName for better debug experience
+
 ## 1.1.1
 ###### *Oct 26, 2018*
 
