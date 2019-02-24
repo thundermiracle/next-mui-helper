@@ -49,6 +49,7 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
     "babel-plugin-add-module-exports": "^1.0.0",
+    "babel-plugin-import": "^1.0.0",
     "babel-plugin-react-require": "^3.0.1",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.19",
     "cross-env": "^5.2.0",

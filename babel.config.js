@@ -31,6 +31,49 @@ if (process.env.NODE_ENV !== 'production') {
 
   plugins = [
     'add-module-exports',
+    [
+      'import',
+      {
+        "libraryName": "@material-ui/core",
+        "libraryDirectory": "",
+        "camel2DashComponentName": false,
+      },
+      "tree-shaking-mui-core",
+    ],
+    [
+      "import",
+      {
+        "libraryName": "@material-ui/core/styles",
+        "libraryDirectory": "",
+        "camel2DashComponentName": false,
+      },
+      "tree-shaking-mui-styles",
+    ],
+    [
+      "import",
+      {
+        "libraryName": "@material-ui/core/colors",
+        "libraryDirectory": "",
+        "camel2DashComponentName": false,
+      },
+      "tree-shaking-mui-colors",
+    ],
+    [
+      "import",
+      {
+        "libraryName": "ramda",
+        "libraryDirectory": "",
+      },
+      "tree-shaking-ramda",
+    ],
+    [
+      "import",
+      {
+        "libraryName": "jss",
+        "libraryDirectory": "",
+      },
+      "tree-shaking-jss",
+    ],
     '@babel/plugin-proposal-class-properties',
     '@babel/plugin-proposal-object-rest-spread',
     [
