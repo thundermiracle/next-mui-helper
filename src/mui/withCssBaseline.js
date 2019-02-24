@@ -2,7 +2,7 @@ import React from 'react';
 
 import hoistStatics from 'hoist-non-react-statics';
 
-import CssBaseline from '@material-ui/core/es/CssBaseline';
+import { CssBaseline } from '@material-ui/core';
 import getDisplayName from '../util/getDisplayName';
 
 /**

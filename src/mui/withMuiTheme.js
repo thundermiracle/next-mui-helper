@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import MuiThemeProvider from '@material-ui/core/es/styles/MuiThemeProvider';
+import { MuiThemeProvider } from '@material-ui/core/styles';
 import JssProvider from 'react-jss/lib/JssProvider';
 import hoistStatics from 'hoist-non-react-statics';
 
