@@ -31,7 +31,6 @@ if (process.env.NODE_ENV !== 'production') {
 
   plugins = [
     'add-module-exports',
-    'ramda',
     [
       'import',
       {
