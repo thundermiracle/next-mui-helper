@@ -31,48 +31,41 @@ if (process.env.NODE_ENV !== 'production') {
 
   plugins = [
     'add-module-exports',
+    'ramda',
     [
       'import',
       {
-        "libraryName": "@material-ui/core",
-        "libraryDirectory": "",
-        "camel2DashComponentName": false,
+        libraryName: '@material-ui/core',
+        libraryDirectory: '',
+        camel2DashComponentName: false,
       },
-      "tree-shaking-mui-core",
+      'tree-shaking-mui-core',
     ],
     [
-      "import",
+      'import',
       {
-        "libraryName": "@material-ui/core/styles",
-        "libraryDirectory": "",
-        "camel2DashComponentName": false,
+        libraryName: '@material-ui/core/styles',
+        libraryDirectory: '',
+        camel2DashComponentName: false,
       },
-      "tree-shaking-mui-styles",
+      'tree-shaking-mui-styles',
     ],
     [
-      "import",
+      'import',
       {
-        "libraryName": "@material-ui/core/colors",
-        "libraryDirectory": "",
-        "camel2DashComponentName": false,
+        libraryName: '@material-ui/core/colors',
+        libraryDirectory: '',
+        camel2DashComponentName: false,
       },
-      "tree-shaking-mui-colors",
+      'tree-shaking-mui-colors',
     ],
     [
-      "import",
+      'import',
       {
-        "libraryName": "ramda",
-        "libraryDirectory": "",
+        libraryName: 'jss',
+        camel2DashComponentName: false,
       },
-      "tree-shaking-ramda",
-    ],
-    [
-      "import",
-      {
-        "libraryName": "jss",
-        "libraryDirectory": "",
-      },
-      "tree-shaking-jss",
+      'tree-shaking-jss',
     ],
     '@babel/plugin-proposal-class-properties',
     '@babel/plugin-proposal-object-rest-spread',
