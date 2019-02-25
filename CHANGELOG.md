@@ -1,5 +1,20 @@
 ### [Versions](https://github.com/thundermiracle/next-mui-helper/releases/)
 
+## 1.3.0
+###### *Feb 26, 2019*
+
+#### Breaking Changes
+
+- Remove unecessary fuctions: 
+
+  - util/makeNextExportPathMap
+  - util/makeWidgetMap
+  - nextjs/extendsWithIntl
+
+#### Changes
+
+- #11 fix require all @material-ui/core
+
 ## 1.2.0
 ###### *Feb 6, 2019*
 
