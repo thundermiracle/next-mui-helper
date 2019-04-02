@@ -4,9 +4,7 @@ import Link from 'next/link';
 
 const Page2 = () => (
   <div>
-    <Button color="primary">
-      Hello World Page2!
-    </Button>
+    <Button color="primary">Hello World Page2!</Button>
     <div>
       <Link href="/">
         <Button>To Page1</Button>

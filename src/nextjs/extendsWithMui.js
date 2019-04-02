@@ -11,7 +11,7 @@ import getDisplayName from '../util/getDisplayName';
  * @param {MUITheme} theme
  * @param {next/document} DocumentComponent
  */
-const extendsWithMui = theme => ((DocumentComponent) => {
+const extendsWithMui = theme => DocumentComponent => {
   class ExtendsWithMui extends DocumentComponent {
     static displayName = `extendsWithMui(${getDisplayName(DocumentComponent)})`;
 
@@ -41,8 +41,8 @@ const extendsWithMui = theme => ((DocumentComponent) => {
 
       // inject theme by hoc
       let pageContext;
-      const page = ctx.renderPage((Component) => {
-        const WrappedComponent = (props) => {
+      const page = ctx.renderPage(Component => {
+        const WrappedComponent = props => {
           // pageContext = props.pageContext;
           // eslint-disable-next-line react/destructuring-assignment
           pageContext = props.pageContext || getContext(theme);
@@ -109,6 +109,6 @@ const extendsWithMui = theme => ((DocumentComponent) => {
   }
 
   return ExtendsWithMui;
-});
+};
 
 export default extendsWithMui;

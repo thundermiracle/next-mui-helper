@@ -6,28 +6,20 @@ const common = {
   plugins: [],
   env: {
     production: {
-      plugins: [
-        'transform-react-remove-prop-types',
-      ],
+      plugins: ['transform-react-remove-prop-types'],
     },
   },
   ignore: ['node_modules/**'],
 };
 
-
 let presets = [];
 let plugins = [];
 if (process.env.NODE_ENV !== 'production') {
   // besides production
-  presets = [
-    'next/babel',
-  ];
+  presets = ['next/babel'];
 } else {
   // production
-  presets = [
-    '@babel/env',
-    '@babel/react',
-  ];
+  presets = ['@babel/env', '@babel/react'];
 
   plugins = [
     'add-module-exports',

@@ -7,10 +7,10 @@ import getDisplayName from '../util/getDisplayName';
 
 /**
  * inject Layout
- * @param {Component} Layout 
+ * @param {Component} Layout
  */
-const withLayout = Layout => ((BaseComponent) => {
-  const InjectLayout = (props) => {
+const withLayout = Layout => BaseComponent => {
+  const InjectLayout = props => {
     return (
       <Layout {...props}>
         <BaseComponent {...props} />
@@ -21,7 +21,7 @@ const withLayout = Layout => ((BaseComponent) => {
   // wrap displayName for easier debug
   InjectLayout.displayName = `withLayout(${getDisplayName(BaseComponent)})`;
 
-  InjectLayout.getInitialProps = async (context) => {
+  InjectLayout.getInitialProps = async context => {
     const props = await getInitialProps(BaseComponent, context);
 
     // Get menu info
@@ -41,6 +41,6 @@ const withLayout = Layout => ((BaseComponent) => {
   hoistStatics(InjectLayout, BaseComponent);
 
   return InjectLayout;
-});
+};
 
 export default withLayout;
