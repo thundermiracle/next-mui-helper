@@ -6,9 +6,7 @@ import withAll from '../client/hoc/withAll';
 
 const Page1 = () => (
   <div>
-    <Button color="primary">
-      Hello World Page1!
-    </Button>
+    <Button color="primary">Hello World Page1!</Button>
     <div>
       <Link href="/page2">
         <Button>To Page2</Button>

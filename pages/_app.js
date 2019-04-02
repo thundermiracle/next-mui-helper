@@ -7,9 +7,7 @@ const Layout = ({ children, title }) => {
   return (
     <div>
       [Layout] -- {title}
-      <div>
-        {children}
-      </div>
+      <div>{children}</div>
     </div>
   );
 };
