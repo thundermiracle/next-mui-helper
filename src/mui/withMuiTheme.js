@@ -10,9 +10,9 @@ import getDisplayName from '../util/getDisplayName';
 
 /**
  * inject Mui Theme
- * @param {object} theme 
+ * @param {object} theme
  */
-const withMuiTheme = theme => ((BaseComponent) => {
+const withMuiTheme = theme => BaseComponent => {
   class InjectMuiTheme extends PureComponent {
     pageContext = null;
 
@@ -64,6 +64,6 @@ const withMuiTheme = theme => ((BaseComponent) => {
   hoistStatics(InjectMuiTheme, BaseComponent);
 
   return InjectMuiTheme;
-});
+};
 
 export default withMuiTheme;

@@ -8,8 +8,8 @@ import getDisplayName from '../util/getDisplayName';
 /**
  * inject Material-ui's default cssbaseline
  */
-const withCssBaseline = (BaseComponent) => {
-  const InjectMUICssBaseline = (props) => {
+const withCssBaseline = BaseComponent => {
+  const InjectMUICssBaseline = props => {
     const CssBaselineWrapper = CssBaseline;
 
     return (

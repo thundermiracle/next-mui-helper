@@ -6,17 +6,17 @@ import Link from 'next/link';
 class Page1 extends React.PureComponent {
   state = {
     inputText: '',
-  }
+  };
 
   componentDidMount() {
     console.log('render only once');
   }
 
-  onTextFieldChange = (e) => {
+  onTextFieldChange = e => {
     this.setState({
       inputText: e.target.value,
     });
-  }
+  };
 
   render() {
     return (

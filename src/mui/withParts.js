@@ -7,7 +7,12 @@ import withCssBaseline from './withCssBaseline';
 
 import defaultTheme from './defaultTheme';
 
-const withParts = (muiTheme = null, Layout = null, enableNProgress = false, enableDefaultCssBaseline = true) => {
+const withParts = (
+  muiTheme = null,
+  Layout = null,
+  enableNProgress = false,
+  enableDefaultCssBaseline = true,
+) => {
   const layoutHoc = Layout != null ? withLayout(Layout) : null;
 
   const muiThemeHoc = withMuiTheme(muiTheme || defaultTheme);
