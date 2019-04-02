@@ -8,7 +8,7 @@ if (argvs.length < 4) {
 }
 
 const destFolder = argvs[2];
-argvs.forEach(function (filePath, ind) {
+argvs.forEach(function(filePath, ind) {
   if (ind < 3) return;
 
   fs.createReadStream(filePath).pipe(fs.createWriteStream(`${destFolder}${filePath}`));

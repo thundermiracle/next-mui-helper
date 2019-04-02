@@ -36,7 +36,9 @@ const styles = theme => ({
       '& .bar': {
         position: 'fixed',
         background:
-          theme.palette.type === 'light' ? theme.palette.common.black : theme.palette.common.white,
+          theme.palette.type === 'light'
+            ? theme.palette.common.black
+            : theme.palette.common.white,
         borderRadius: 1,
         zIndex: theme.zIndex.tooltip,
         top: 0,
@@ -49,7 +51,9 @@ const styles = theme => ({
         top: 0,
         height: 2,
         boxShadow: `${
-          theme.palette.type === 'light' ? theme.palette.common.black : theme.palette.common.white
+          theme.palette.type === 'light'
+            ? theme.palette.common.black
+            : theme.palette.common.white
         } 1px 0 6px 1px`,
         borderRadius: '100%',
         animation: 'nprogress-pulse 2s ease-out 0s infinite',
@@ -81,11 +85,10 @@ const styles = theme => ({
   },
 });
 
-
 /**
  * inject nprogress with NextJs.Router
  */
-const withProgressBar = (BaseComponent) => {
+const withProgressBar = BaseComponent => {
   const InjectProgressBar = props => <BaseComponent {...props} />;
 
   // wrap displayName for easier debug

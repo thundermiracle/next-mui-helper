@@ -1,13 +1,11 @@
 {
-    "compilerOptions": {
-        "experimentalDecorators": true,
-        "baseUrl": ".",
-        "paths": {
-            "*": ["src/*"],
-            "material-ui": ["@material-ui/core"]
-        }
-    },
-    "exclude": [
-        "node_modules"
-    ]
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": ["src/*"],
+      "material-ui": ["@material-ui/core"]
+    }
+  },
+  "exclude": ["node_modules"]
 }

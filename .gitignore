@@ -3,7 +3,6 @@ npm-debug.log
 yarn-error.log
 .next/
 dist/
-.vscode/
 
 # dependencies
 node_modules/
