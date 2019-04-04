@@ -1,31 +1,43 @@
 {
   "name": "next-mui-helper",
-  "version": "1.3.0",
+  "version": "2.0.0",
+  "license": "MIT",
+  "homepage": "https://github.com/thundermiracle/next-mui-helper",
   "description": "hocs for making material-ui project with next.js(SSR)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thundermiracle/next-mui-helper"
+  },
+  "bugs": {
+    "url": "https://github.com/thundermiracle/next-mui-helper/issues"
+  },
+  "keywords": [
+    "material-ui",
+    "nextjs",
+    "next-mui-helper",
+    "nprogress",
+    "hoc"
+  ],
+  "author": "thundermiracle",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "es"
+  ],
   "scripts": {
     "eslint": "eslint ./src",
-    "build:rm": "rm -rf dist/",
-    "build:cp": "node ./scripts/copyFiles dist/ package.json README.md CHANGELOG.md LICENSE",
-    "build": "npm run build:rm && cross-env NODE_ENV=production babel src --out-dir ./dist --verbose && npm run build:cp",
+    "build:rm": "rm -rf dist/ && rm -rf es/",
+    "build:prd": "cross-env NODE_ENV=production babel src --out-dir ./dist --verbose",
+    "build:es": "cross-env NODE_ENV=es babel src --out-dir ./es --verbose",
+    "build": "npm run build:rm && npm run build:prd && npm run build:es",
     "prettier": "prettier --write ./**/*.js ./**/*.json",
     "eslint-check": "eslint --print-config . | eslint-config-prettier-check",
     "jest": "jest",
     "dev": "next",
     "test": "cross-env NODE_ENV=production npm run eslint && cross-env NODE_ENV=production npm run jest"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/thundermiracle/next-mui-helper"
-  },
-  "author": "thundermiracle",
-  "license": "MIT",
-  "files": [
-    "mui",
-    "nextjs",
-    "util"
-  ],
   "dependencies": {
-    "hoist-non-react-statics": "^3.2.1",
+    "hoist-non-react-statics": "^3.3.0",
     "jss": "^9.8.7",
     "nprogress": "^0.2.0",
     "react-jss": "^8.6.1"
@@ -35,37 +47,37 @@
     "next": "*"
   },
   "devDependencies": {
-    "@babel/cli": "^7.1.2",
-    "@babel/core": "^7.1.2",
-    "@babel/plugin-proposal-class-properties": "^7.1.0",
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
-    "@babel/plugin-transform-runtime": "^7.1.0",
-    "@babel/preset-env": "^7.1.0",
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
+    "@babel/plugin-transform-runtime": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
     "@babel/preset-react": "^7.0.0",
-    "@material-ui/core": "^3.3.1",
+    "@material-ui/core": "^3.9.3",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
-    "babel-jest": "^23.6.0",
+    "babel-jest": "^24.7.1",
     "babel-plugin-add-module-exports": "^1.0.0",
-    "babel-plugin-import": "^1.0.0",
-    "babel-plugin-react-require": "^3.0.1",
-    "babel-plugin-transform-react-remove-prop-types": "^0.4.19",
+    "babel-plugin-import": "^1.11.0",
+    "babel-plugin-react-require": "^3.1.1",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "cross-env": "^5.2.0",
-    "eslint": "^5.7.0",
+    "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.1.0",
     "eslint-config-react": "^1.1.7",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jest": "^21.26.0",
-    "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.11.1",
-    "jest": "^23.6.0",
-    "next": "^7.0.2",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jest": "^22.4.1",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "jest": "^24.7.1",
+    "next": "^8.0.4",
     "prettier": "^1.16.4",
-    "prop-types": "^15.6.2",
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
-    "regenerator-runtime": "^0.12.1"
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "regenerator-runtime": "^0.13.2"
   },
   "jest": {
     "transform": {}
