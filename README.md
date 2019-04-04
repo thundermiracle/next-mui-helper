@@ -37,7 +37,7 @@ npm install --save next-mui-helper
 1. Create _document.js under the pages folder.
 
 ```jsx
-import makeNextDocument from 'next-mui-helper/nextjs/makeNextDocument';
+import { makeNextDocument } from 'next-mui-helper';
 
 export default makeNextDocument();
 ```
@@ -46,7 +46,7 @@ export default makeNextDocument();
 
 ```jsx
 import React from 'react';
-import withParts from 'next-mui-helper/mui/withParts';
+import { withParts } from 'next-mui-helper';
 import Button from '@material-ui/core/Button';
 
 const Page1 = () => (
@@ -62,7 +62,7 @@ That's it! Want to inject your own theme? See following instructions.
 ### About step2, you also can create _app.js under the pages folder instead. See [this example](/examples/withThemeApp).
 
 ```jsx
-import makeNextApp from 'next-mui-helper/nextjs/makeNextApp';
+import { makeNextApp } from 'next-mui-helper';
 
 export default makeNextApp();
 ```
@@ -71,13 +71,15 @@ export default makeNextApp();
 
 ## Instructions
 
-* **nextjs/makeNextDocument**
+#### You can import functions from next-mui-helper/es if es6 is preferable.
+
+* **makeNextDocument**
 
 | No.   |      Parameter      |  Default | Description |
 |:---|:-------------:|:--------------|:-----------|
 | 1 |  muiTheme | ```{ palette: { primary: blue, secondary: pink, }, }``` | material-ui's theme object |
 
-* **mui/withParts**
+* **withParts**
 
 | No.   |      Parameter      |  Default | Description |
 |:---|:-------------:|:--------------|:-----------|
@@ -86,7 +88,7 @@ export default makeNextApp();
 | 3 |  enable nprogress | false | enable progress bar made by [nprogress](https://github.com/rstacruz/nprogress) |
 | 4 |  enable CssBaseline | true | enable material-ui's default [CssBaseline](https://material-ui-next.com/style/css-baseline/) |
 
-* **nextjs/makeNextApp**
+* **makeNextApp**
 
 Same with withParts. But can be used to create a _app.js file.
 
@@ -103,6 +105,8 @@ Open them in CodeSandbox:
 1. withTheme:　[[withTheme] in CodeSandbox](https://codesandbox.io/s/github/thundermiracle/next-mui-helper/tree/master/examples/withTheme?module=%2Fsrc%2Fpages%2Findex.js)
 
 1. withThemeApp:　[[withThemeApp] in CodeSandbox](https://codesandbox.io/s/github/thundermiracle/next-mui-helper/tree/master/examples/withThemeApp?module=%2Fsrc%2Fpages%2Findex.js)
+
+1. import es6:　[[es6] in CodeSandbox](https://codesandbox.io/s/github/thundermiracle/next-mui-helper/tree/master/examples/es6)
 
 ## License
 

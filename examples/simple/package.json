@@ -11,7 +11,7 @@
     "@material-ui/core": "latest",
     "@material-ui/icons": "latest",
     "next": "latest",
-    "next-mui-helper": "^1.3.0",
+    "next-mui-helper": "latest",
     "react": "latest",
     "react-dom": "latest"
   }

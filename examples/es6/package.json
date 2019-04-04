@@ -1,7 +1,7 @@
 {
-  "name": "withthemeapp",
+  "name": "es6",
   "version": "1.0.0",
-  "description": "example of inject theme and layout with next-mui-helper and using app.js instead of hoc",
+  "description": "sample of using es/",
   "scripts": {
     "dev": "next ./src"
   },
@@ -10,9 +10,9 @@
   "dependencies": {
     "@material-ui/core": "latest",
     "@material-ui/icons": "latest",
-    "next": "latest",
+    "next": "^8.0.4",
     "next-mui-helper": "latest",
-    "prop-types": "^15.7.2",
+    "next-transpile-modules": "^2.2.0",
     "react": "latest",
     "react-dom": "latest"
   }
