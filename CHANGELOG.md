@@ -1,5 +1,14 @@
 ### [Versions](https://github.com/thundermiracle/next-mui-helper/releases/)
 
+## 2.0.0
+###### *Apr 4, 2019*
+
+#### Breaking Changes
+
+- Change package folder structure
+- Release es6 files to es/ folder
+- Update dependendies to latest
+
 ## 1.3.0
 ###### *Feb 26, 2019*
 

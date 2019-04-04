@@ -43,7 +43,6 @@ const extendsWithMui = theme => DocumentComponent => {
       let pageContext;
       const page = ctx.renderPage(Component => {
         const WrappedComponent = props => {
-          // pageContext = props.pageContext;
           // eslint-disable-next-line react/destructuring-assignment
           pageContext = props.pageContext || getContext(theme);
           return <Component {...props} pageContext={pageContext} />;
