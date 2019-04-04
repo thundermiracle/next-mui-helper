@@ -7,6 +7,7 @@ next.config.js
 
 # Ignore built files
 dist/*
+es/*
 
 # Ignore jest
 #test/**/*

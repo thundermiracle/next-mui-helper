@@ -1,4 +1,4 @@
-import withParts from 'next-mui-helper/mui/withParts';
+import { withParts } from 'next-mui-helper';
 
 import CommonLayout from '../layout/CommonLayout';
 import theme from '../style/theme';
