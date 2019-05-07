@@ -8,8 +8,8 @@ import getStore from '../store/getStore';
 /**
  * inject redux store
  */
-const withMuiTheme = BaseComponent => {
-  class InjectMuiTheme extends PureComponent {
+const withReduxStore = BaseComponent => {
+  class InjectReduxStore extends PureComponent {
     static async getInitialProps(ctx) {
       // Get or Create the store with `undefined` as initialState
       // This allows you to set a custom default initialState
@@ -43,15 +43,15 @@ const withMuiTheme = BaseComponent => {
     }
   }
 
-  InjectMuiTheme.propTypes = {
+  InjectReduxStore.propTypes = {
     initialReduxState: PropTypes.object,
   };
 
-  InjectMuiTheme.defaultProps = {
+  InjectReduxStore.defaultProps = {
     initialReduxState: null,
   };
 
-  return InjectMuiTheme;
+  return InjectReduxStore;
 };
 
-export default withMuiTheme;
+export default withReduxStore;
