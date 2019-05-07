@@ -1,0 +1,22 @@
+{
+  "name": "withredux",
+  "version": "1.0.0",
+  "description": "example of using next-mui-helper with redux store",
+  "scripts": {
+    "dev": "next ./src"
+  },
+  "author": "thundermiracle",
+  "license": "MIT",
+  "dependencies": {
+    "@material-ui/core": "latest",
+    "@material-ui/icons": "latest",
+    "next": "latest",
+    "next-mui-helper": "latest",
+    "prop-types": "^15.7.2",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-redux": "^7.0.3",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.8"
+  }
+}
