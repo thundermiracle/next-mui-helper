@@ -1,5 +1,12 @@
 ### [Versions](https://github.com/thundermiracle/next-mui-helper/releases/)
 
+## 3.0.0
+###### *May 27, 2019*
+
+#### Breaking Changes
+
+- Support @material-ui/xxx@4.0.0 or above only
+
 ## 2.0.0
 ###### *Apr 4, 2019*
 
