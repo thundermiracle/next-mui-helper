@@ -30,6 +30,8 @@ This package wraps those steps and you can achieve the goal with only `two` step
 
 * [next-boilerplate](https://github.com/thundermiracle/next-boilerplate) simple boilerplate of next.js. With material-ui, google analytics, customizable export, simple layout support.
 
+* [react-sunflower](https://github.com/thundermiracle/react-sunflower) drawing sunflower by using next.js.
+
 ## Installation
 
 next-mui-helper is available as an [npm package](https://www.npmjs.org/package/next-mui-helper).
