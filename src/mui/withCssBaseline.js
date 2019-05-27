@@ -2,7 +2,7 @@ import React from 'react';
 
 import hoistStatics from 'hoist-non-react-statics';
 
-import { CssBaseline } from '@material-ui/core';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import getDisplayName from '../util/getDisplayName';
 
 /**
@@ -10,13 +10,11 @@ import getDisplayName from '../util/getDisplayName';
  */
 const withCssBaseline = BaseComponent => {
   const InjectMUICssBaseline = props => {
-    const CssBaselineWrapper = CssBaseline;
-
     return (
-      <div>
-        <CssBaselineWrapper />
+      <>
+        <CssBaseline />
         <BaseComponent {...props} />
-      </div>
+      </>
     );
   };
 

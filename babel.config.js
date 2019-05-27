@@ -56,14 +56,6 @@ const productionPlugins = [
     },
     'tree-shaking-mui-colors',
   ],
-  [
-    'import',
-    {
-      libraryName: 'jss',
-      camel2DashComponentName: false,
-    },
-    'tree-shaking-jss',
-  ],
   '@babel/plugin-proposal-class-properties',
   '@babel/plugin-proposal-object-rest-spread',
   [
