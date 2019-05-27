@@ -1,8 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Head, Main, NextScript } from 'next/document';
+import ServerStyleSheets from '@material-ui/styles/ServerStyleSheets';
+import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
+import flush from 'styled-jsx/server';
 
-import getContext from '../util/getContext';
 import getDisplayName from '../util/getDisplayName';
 
 /**
@@ -11,7 +12,10 @@ import getDisplayName from '../util/getDisplayName';
  * @param {MUITheme} theme
  * @param {next/document} DocumentComponent
  */
-const extendsWithMui = theme => DocumentComponent => {
+const extendsWithMui = themeInput => DocumentComponent => {
+  // wrap de
+  const theme = createMuiTheme(themeInput);
+
   class ExtendsWithMui extends DocumentComponent {
     static displayName = `extendsWithMui(${getDisplayName(DocumentComponent)})`;
 
@@ -37,51 +41,33 @@ const extendsWithMui = theme => DocumentComponent => {
       // 2. page.getInitialProps
       // 3. app.render
       // 4. page.render
-      const superProps = await super.getInitialProps(ctx);
 
       // inject theme by hoc
-      let pageContext;
-      const page = ctx.renderPage(Component => {
-        const WrappedComponent = props => {
-          // eslint-disable-next-line react/destructuring-assignment
-          pageContext = props.pageContext || getContext(theme);
-          return <Component {...props} pageContext={pageContext} />;
-        };
+      const sheets = new ServerStyleSheets();
+      const originalRenderPage = ctx.renderPage;
+      ctx.renderPage = () =>
+        originalRenderPage({
+          // wrap Jss context
+          enhanceApp: App => props => sheets.collect(<App {...props} />),
+        });
 
-        WrappedComponent.propTypes = {
-          pageContext: PropTypes.object,
-        };
+      // get props after override the renderPage to get jss props
+      const superProps = await super.getInitialProps(ctx);
 
-        WrappedComponent.defaultProps = {
-          pageContext: null,
-        };
-
-        return WrappedComponent;
-      });
-
-      const { head } = superProps;
-      if (pageContext != null) {
-        const jssStyles = (
-          <style
-            id="jss-server-side"
-            key="jss-server-side-key"
-            dangerouslySetInnerHTML={{ __html: pageContext.sheetsRegistry.toString() }}
-          />
-        );
-        head.push(jssStyles);
-      }
+      // push to head instead of override styles
+      superProps.head.push(
+        <React.Fragment key="jss-server-side">
+          {sheets.getStyleElement()}
+          {flush() || null}
+        </React.Fragment>,
+      );
 
       return {
         ...superProps,
-        ...page,
-        head,
-        pageContext,
       };
     }
 
     render() {
-      const { pageContext } = this.props;
-
       return (
         <html lang="en">
           <Head>
@@ -92,7 +78,7 @@ const extendsWithMui = theme => DocumentComponent => {
               content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
             />
             {/* PWA primary color */}
-            <meta name="theme-color" content={pageContext.theme.palette.primary.main} />
+            <meta name="theme-color" content={theme.palette.primary.main} />
             <link
               rel="stylesheet"
               href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
