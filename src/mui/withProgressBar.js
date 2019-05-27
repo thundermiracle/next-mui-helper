@@ -4,7 +4,7 @@ import NProgress from 'nprogress';
 import Router from 'next/router';
 import hoistStatics from 'hoist-non-react-statics';
 
-import { withStyles } from '@material-ui/core/styles';
+import withStyles from '@material-ui/core/styles/withStyles';
 import getDisplayName from '../util/getDisplayName';
 
 // Disaply a progress bar between route transitions
