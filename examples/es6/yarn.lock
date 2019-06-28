@@ -2697,9 +2697,9 @@ neo-async@^2.5.0:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
 
-next-mui-helper@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/next-mui-helper/-/next-mui-helper-3.0.0.tgz#adc0b81e557549a2ba6ce76e936b3a5fa0404b72"
+next-mui-helper@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/next-mui-helper/-/next-mui-helper-3.0.1.tgz#2c1b038c0f33440da388285bad13d7d850b4f43a"
   dependencies:
     hoist-non-react-statics "^3.3.0"
     nprogress "^0.2.0"

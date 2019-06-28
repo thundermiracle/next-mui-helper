@@ -1,6 +1,6 @@
 {
   "name": "next-mui-helper",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "license": "MIT",
   "homepage": "https://github.com/thundermiracle/next-mui-helper",
   "description": "hocs for making material-ui project with next.js(SSR)",
@@ -42,7 +42,6 @@
   },
   "peerDependencies": {
     "@material-ui/core": "^4.0",
-    "@material-ui/styles": "^4.0",
     "next": "*"
   },
   "devDependencies": {
