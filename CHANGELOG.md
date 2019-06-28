@@ -1,5 +1,16 @@
 ### [Versions](https://github.com/thundermiracle/next-mui-helper/releases/)
 
+## 3.0.1
+###### *Jun 28, 2019*
+
+#### Breaking Changes
+
+N/A
+
+#### Changes
+
+- Remove @material-ui/styles from peerDependencies
+
 ## 3.0.0
 ###### *May 27, 2019*
 
