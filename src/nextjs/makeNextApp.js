@@ -2,9 +2,15 @@ import React from 'react';
 import App, { Container } from 'next/app';
 import withParts from '../mui/withParts';
 
-const makeNextApp = (muiTheme, Layout, enableNProgress, enableDefaultCssBaseline) => {
+const makeNextApp = (
+  muiTheme,
+  Layout,
+  enableNProgress,
+  enableDefaultCssBaseline,
+  BaseAppComponent = App,
+) => {
   const hocs = withParts(muiTheme, Layout, enableNProgress, enableDefaultCssBaseline);
-  class NextApp extends App {
+  class NextApp extends BaseAppComponent {
     // inject props made by hoc
     static async getInitialProps({ Component, ctx }) {
       let pageProps = {};
