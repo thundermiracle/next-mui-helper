@@ -24,6 +24,8 @@ switch (process.env.NODE_ENV) {
     break;
   default:
     presets = ['next/babel'];
+    // prevent next9.0.2 compile error
+    delete common.ignore;
     break;
 }
 
