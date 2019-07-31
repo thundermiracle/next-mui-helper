@@ -11,8 +11,8 @@ import compose from '../util/compose';
  * Including material-ui.
  * @param {MUITheme} theme
  */
-const makeNextDocument = theme =>
-  compose(extendsWithMui(theme || defaultTheme))(Document);
+const makeNextDocument = (theme, BaseDocumentComponent = Document) =>
+  compose(extendsWithMui(theme || defaultTheme))(BaseDocumentComponent);
 
 export default makeNextDocument;
 
