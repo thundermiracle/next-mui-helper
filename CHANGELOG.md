@@ -1,5 +1,16 @@
 ### [Versions](https://github.com/thundermiracle/next-mui-helper/releases/)
 
+## 3.0.2
+###### *Aug 1, 2019*
+
+#### Breaking Changes
+
+N/A
+
+#### Changes
+
+- Expose [Document] in makeNextDocument and [App] in makeNextApp to prevent next9.0.2 from throwing error #26
+
 ## 3.0.1
 ###### *Jun 28, 2019*
 
