@@ -86,6 +86,7 @@ export default makeNextApp();
 | No.   |      Parameter      |  Default | Description |
 |:---|:-------------:|:--------------|:-----------|
 | 1 |  muiTheme | ```{ palette: { primary: blue, secondary: pink, }, }``` | material-ui's theme object |
+| 2 |  Document | ```next/document``` | next9.0.2 throws err if you don't pass next/document explicitly (see [here](https://github.com/thundermiracle/next-mui-helper/issues/26)) |
 
 * **withParts**
 
@@ -98,7 +99,13 @@ export default makeNextApp();
 
 * **makeNextApp**
 
-Same with withParts. But can be used to create a _app.js file.
+| No.   |      Parameter      |  Default | Description |
+|:---|:-------------:|:--------------|:-----------|
+| 1 |  muiTheme | ```{ palette: { primary: blue, secondary: pink, }, }``` | material-ui's theme object |
+| 2 |  layout | null | Layout component(like ```<Layout>{childrend}</Layout>)``` |
+| 3 |  enable nprogress | false | enable progress bar made by [nprogress](https://github.com/rstacruz/nprogress) |
+| 4 |  enable CssBaseline | true | enable material-ui's default [CssBaseline](https://material-ui-next.com/style/css-baseline/) |
+| 5 |  App | ```next/app``` | next9.0.2 throws err if you don't pass next/app explicitly (see [here](https://github.com/thundermiracle/next-mui-helper/issues/26)) |
 
 ## Examples
 
@@ -117,6 +124,8 @@ Open them in CodeSandbox:
 1. import es6:　[[es6] in CodeSandbox](https://codesandbox.io/s/github/thundermiracle/next-mui-helper/tree/master/examples/es6)
 
 1. withRedux:　[[withRedux] in CodeSandbox](https://codesandbox.io/s/github/thundermiracle/next-mui-helper/tree/master/examples/withRedux?module=%2Fsrc%2Fpages%2Findex.js)
+
+1. withoutNewErr:　[[withoutNewErr] in CodeSandbox](https://codesandbox.io/s/github/thundermiracle/next-mui-helper/tree/master/examples/withoutNewErr?module=%2Fsrc%2Fpages%2Findex.js)
 
 ## License
 
