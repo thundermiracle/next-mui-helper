@@ -17,6 +17,7 @@ switch (process.env.NODE_ENV) {
   case 'es':
     // es6
     presets = ['@babel/react'];
+    // presets = [['@babel/env', { targets: { esmodules: true } }], '@babel/react'];
     break;
   case 'production':
     // production
