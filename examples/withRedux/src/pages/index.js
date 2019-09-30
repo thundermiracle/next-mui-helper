@@ -2,7 +2,6 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import Link from 'next/link';
 import Counter from '../client/components/Counter';
-import withRedux from '../client/hoc/withRedux';
 
 const Page1 = () => (
   <div>
@@ -15,4 +14,4 @@ const Page1 = () => (
   </div>
 );
 
-export default withRedux(Page1);
+export default Page1;
