@@ -1,4 +1,4 @@
-import { makeNextDocument } from 'next-mui-helper';
+import { makeNextDocument } from 'next-mui-helper/es';
 
 import theme from '../client/style/theme';
 
