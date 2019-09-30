@@ -1,8 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import { Provider } from 'react-redux';
-
 import getStore from '../store/getStore';
 
 /**
@@ -35,11 +33,7 @@ const withReduxStore = BaseComponent => {
     }
 
     render() {
-      return (
-        <Provider store={this.reduxStore}>
-          <BaseComponent {...this.props} />
-        </Provider>
-      );
+      return <BaseComponent {...this.props} reduxStore={this.reduxStore} />;
     }
   }
 
