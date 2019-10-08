@@ -1,5 +1,5 @@
 import React from 'react';
-import App, { Container } from 'next/app';
+import App from 'next/app';
 import withParts from '../mui/withParts';
 
 const makeNextApp = (
@@ -28,11 +28,7 @@ const makeNextApp = (
       const { Component, pageProps } = this.props;
       const NewComponent = hocs(Component);
 
-      return (
-        <Container>
-          <NewComponent {...pageProps} />
-        </Container>
-      );
+      return <NewComponent {...pageProps} />;
     }
   }
 
