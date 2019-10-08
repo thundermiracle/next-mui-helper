@@ -1,5 +1,16 @@
 ### [Versions](https://github.com/thundermiracle/next-mui-helper/releases/)
 
+## 3.0.3
+###### *Oct 8, 2019*
+
+#### Breaking Changes
+
+N/A
+
+#### Changes
+
+- Remove deprecated unnecessary Container
+
 ## 3.0.2
 ###### *Aug 1, 2019*
 
