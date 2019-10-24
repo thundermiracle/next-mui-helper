@@ -19,4 +19,4 @@ Layout.defaultProps = {
   title: '',
 };
 
-export default makeNextApp(null, Layout);
+export default makeNextApp(null, Layout, true, true);

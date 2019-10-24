@@ -1,6 +1,9 @@
 import React from 'react';
 import App from 'next/app';
 import withParts from '../mui/withParts';
+import ThemeManagerContext, {
+  ThemeManagerProvider,
+} from '../context/ThemeManagerContext';
 
 const makeNextApp = (
   muiTheme,
@@ -26,9 +29,23 @@ const makeNextApp = (
 
     render() {
       const { Component, pageProps } = this.props;
-      const NewComponent = hocs(Component);
 
-      return <NewComponent {...pageProps} />;
+      return (
+        <ThemeManagerProvider initTheme={muiTheme}>
+          <ThemeManagerContext.Consumer>
+            {({ theme }) => {
+              const NewComponent = withParts(
+                theme,
+                Layout,
+                enableNProgress,
+                enableDefaultCssBaseline,
+              )(Component);
+
+              return <NewComponent {...pageProps} />;
+            }}
+          </ThemeManagerContext.Consumer>
+        </ThemeManagerProvider>
+      );
     }
   }
 
