@@ -136,6 +136,24 @@ That's it! Want to inject your own theme? See following instructions.
 | 3 |  enable nprogress | false | enable progress bar made by [nprogress](https://github.com/rstacruz/nprogress) |
 | 4 |  enable CssBaseline | true | enable material-ui's default [CssBaseline](https://material-ui-next.com/style/css-baseline/) |
 
+* **withProgressBar**
+| No.   |      Parameter      |  Default | Description |
+|:---|:-------------:|:--------------|:-----------|
+| 1 |  BaseComponent |  | add NProgress bar to BaseComponent |
+
+* **useThemeManagerContext**
+hook for manage theme.
+
+| No.   |      Parameter      |  Default | Description |
+|:---|:-------------:|:--------------|:-----------|
+| 1 | |  | returns theme object and setTheme(theme). call setTheme(theme) to change the project's theme |
+
+* **withThemeManager**
+hoc to inject theme object and setTheme(theme) function
+
+* **deepCompareObj**
+deep compare two objects, return _true_ if they're the same.
+
 ## Examples
 
 You can find some examples under the [./example](/examples) folder.

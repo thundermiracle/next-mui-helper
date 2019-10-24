@@ -1,5 +1,17 @@
 ### [Versions](https://github.com/thundermiracle/next-mui-helper/releases/)
 
+## 3.0.4
+###### *Oct 24, 2019*
+
+#### Breaking Changes
+
+N/A
+
+#### Changes
+
+- Add ThemeManagerContext to enable theme change
+- Add deepCompareObj helper function
+
 ## 3.0.3
 ###### *Oct 8, 2019*
 
