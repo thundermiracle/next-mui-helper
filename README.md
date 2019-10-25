@@ -172,6 +172,8 @@ Open them in CodeSandbox:
 
 1. withRedux:　[[withRedux] in CodeSandbox](https://codesandbox.io/s/github/thundermiracle/next-mui-helper/tree/master/examples/withRedux?module=%2Fsrc%2Fpages%2Findex.js)
 
+1. changeTheme:　[[changeTheme] in CodeSandbox](https://codesandbox.io/s/github/thundermiracle/next-mui-helper/tree/master/examples/changeTheme?module=%2Fsrc%2Fpages%2Findex.js)
+
 ## License
 
 This project is licensed under the terms of the
