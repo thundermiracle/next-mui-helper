@@ -1,0 +1,6 @@
+# build output
+npm-debug.log
+.next/
+
+# dependencies
+node_modules/

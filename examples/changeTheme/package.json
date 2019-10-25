@@ -1,0 +1,20 @@
+{
+  "name": "changetheme",
+  "version": "1.0.0",
+  "description": "example of change theme",
+  "scripts": {
+    "dev": "next ./src"
+  },
+  "author": "thundermiracle",
+  "license": "MIT",
+  "dependencies": {
+    "@material-ui/core": "^4.5.1",
+    "@material-ui/icons": "^4.5.1",
+    "next": "^9.1.1",
+    "next-mui-helper": "^3.0.4",
+    "next-transpile-modules": "^2.3.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  }
+}
