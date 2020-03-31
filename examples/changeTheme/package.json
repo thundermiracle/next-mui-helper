@@ -10,7 +10,7 @@
   "dependencies": {
     "@material-ui/core": "^4.5.1",
     "@material-ui/icons": "^4.5.1",
-    "next": "^9.1.1",
+    "next": "^9.3.2",
     "next-mui-helper": "^3.0.4",
     "next-transpile-modules": "^2.3.1",
     "prop-types": "^15.7.2",
