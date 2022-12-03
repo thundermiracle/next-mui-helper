@@ -1557,8 +1557,8 @@ debug@^4.1.0:
     ms "^2.1.1"
 
 decode-uri-component@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.2.tgz#e69dbe25d37941171dd540e024c444cd5188e1e9"
 
 deep-extend@^0.6.0:
   version "0.6.0"
@@ -2697,9 +2697,9 @@ neo-async@^2.5.0:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
 
-next-mui-helper@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/next-mui-helper/-/next-mui-helper-3.0.0.tgz#adc0b81e557549a2ba6ce76e936b3a5fa0404b72"
+next-mui-helper@^3.0.1:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/next-mui-helper/-/next-mui-helper-3.0.4.tgz#0b3b528ecb2322a2c980eb5015159f6a14837c4e"
   dependencies:
     hoist-non-react-statics "^3.3.0"
     nprogress "^0.2.0"
